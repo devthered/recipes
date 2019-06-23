@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.container {
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
+}
+
+.recipe {
+  position: relative;
+  left: 50%;
+  width: 721px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 761px) {
+  .recipe {
+    width: 100%;
+  }
+}
+
+.recipe-header {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-width: 1px 1px 0 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.genre-baked .recipe-header {
+  background-color: #82793e;
+  color: white;
+}
+
+.genre-veggie .recipe-header {
+  background-color: #344c27;
+  color: white;
+}
+
+.recipe-header .recipe-title {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.recipe-header .recipe-author {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.recipe-body {
+  padding: 20px 15px 10px 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-width: 0 1px 1px 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.recipe-body h2 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe-body ul.ingredients {
+  margin: 0 0 20px 0;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.2em
+}
+
+.recipe-body .ingredients li {
+
+}
+
+.recipe-body p {
+  margin: 0;
+}
+
+.recipe-body .spacer {
+  clear: both;
+  height: 0;
+}
