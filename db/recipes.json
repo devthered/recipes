@@ -1,6 +1,5 @@
 [
   {
-    "_id" : "00001",
     "title" : "Classic British Scones",
     "source" : "Mischa Lewis-Norelle",
     "genre" : "baked",
@@ -12,10 +11,9 @@
       "70 g (5 tbsp) cold unsalted butter",
       "120 g (1 cup) heavy cream (or buttermilk or coconut milk)"
     ],
-    "instructions" : "Preheat oven to 425˚F. <br><br>Combine dry ingredients and butter with food processor or fingertips until mixture resembles coarse sand. Stir in any mix-ins. Then put the mixture in the freezer for 15 minutes, or overnight for easy scones tomorrow morning.<br><br>Stir in cream until a dough begins to form. Then transfer to a floured work surface and knead together until the dough just comes together in a rough, slightly sticky ball. Gently pat dough into a ¾-inch-think circle, and cut into 8 wedges. Bake until tops are light brown, 12-15 minutes. Let cool on rack for 10 minutes before serving with butter (or clotted cream if available) and jam.<br><br><b>Variations:</b><br><i>Jalapeno Cheddar:</i> omit sugar. Add only 3 tbsp butter along with 4 oz sharp cheddar cheese. Add ½ cup jalapenos.<br><i>Cranberry Orange:</i> add ½ cup cranberries, the zest of an orange, and 2 tbsp orange liqueur.<br><i>Ginger, Lemon, Mint:</i> add ½ cup crystallized ginger, the zest of a lemon, 2 tbsp lemon juice or extract, and ¼ cup chopped mint."
+    "instructions" : "Preheat oven to 425˚F. <br><br>Combine dry ingredients and butter with food processor or fingertips until mixture resembles coarse sand. Stir in any mix-ins. Then put the mixture in the freezer for 15 minutes, or overnight for easy scones tomorrow morning.<br><br>Stir in cream until a dough begins to form. Then transfer to a floured work surface and knead together until the dough just comes together in a rough, slightly sticky ball. Gently pat dough into a ¾-inch-think circle, and cut into 8 wedges. Bake until tops are light brown, 12-15 minutes. Let cool on rack for 10 minutes before serving with butter (or clotted cream if available) and jam.<br><br><b>Variations:</b><br><br><i>Jalapeno Cheddar:</i> omit sugar. Add only 3 tbsp butter along with 4 oz sharp cheddar cheese. Add ½ cup jalapenos.<br><br><i>Cranberry Orange:</i> add ½ cup cranberries, the zest of an orange, and 2 tbsp orange liqueur.<br><br><i>Ginger, Lemon, Mint:</i> add ½ cup crystallized ginger, the zest of a lemon, 2 tbsp lemon juice or extract, and ¼ cup chopped mint."
   },
   {
-    "_id" : "00002",
     "title" : "Pasta Aglio e Olio",
     "source" : "Babish",
     "genre" : "veggie",
