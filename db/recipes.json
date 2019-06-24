@@ -3,6 +3,7 @@
     "_id" : "00001",
     "title" : "Classic British Scones",
     "source" : "Mischa Lewis-Norelle",
+    "genre" : "baked",
     "ingredients" : [
       "285 g (2 cups) flour",
       "40 g (3 tbsp) sugar",
@@ -17,6 +18,7 @@
     "_id" : "00002",
     "title" : "Pasta Aglio e Olio",
     "source" : "Babish",
+    "genre" : "veggie",
     "ingredients" : [
       "½ head garlic, separated and peeled ",
       "1 bunch parsley, rinsed",

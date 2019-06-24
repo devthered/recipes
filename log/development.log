@@ -319,3 +319,19 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms | MongoDB: 0.0ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/devinreed/.rbenv/versions/2.4.5/bin/rake:23
+Started GET "/" for ::1 at 2019-06-24 14:16:52 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/devinreed/.rbenv/versions/2.4.5/lib/ruby/gems/2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/devinreed/.rbenv/versions/2.4.5/lib/ruby/gems/2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 33ms (Views: 16.3ms | ActiveRecord: 0.0ms | MongoDB: 0.0ms)
+
+
+Started GET "/recipes" for ::1 at 2019-06-24 14:16:56 +0100
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 408ms (Views: 397.0ms | ActiveRecord: 0.0ms | MongoDB: 0.0ms)
+
+

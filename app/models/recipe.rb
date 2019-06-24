@@ -6,4 +6,5 @@ class Recipe
   field :source, type: String
   field :ingredients, type: Array
   field :instructions, type: String
+  field :genre, type: String
 end

@@ -3,7 +3,7 @@
 <h1>Recipes</h1>
 <div class="container">
   <% @recipes.each do |recipe| %>
-    <div class="recipe">
+    <div class="recipe genre-<%= recipe.genre %>">
       <div class="recipe-header">
         <h2 class="recipe-title"><%= recipe.title %></h2>
         <h3 class="recipe-author"><%= recipe.source %></h3>

@@ -33,6 +33,16 @@
   border-style: solid;
 }
 
+.genre-baked .recipe-header {
+  background-color: #82793e;
+  color: white;
+}
+
+.genre-veggie .recipe-header {
+  background-color: #344c27;
+  color: white;
+}
+
 .recipe-header .recipe-title {
   font-size: 2.3em;
   font-weight: bold;
