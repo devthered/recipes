@@ -1,0 +1,83 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
+}
+
+.recipe {
+  position: relative;
+  left: 50%;
+  width: 721px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 761px) {
+  .recipe {
+    width: 100%;
+  }
+}
+
+.recipe-header {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-width: 1px 1px 0 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.recipe-header .recipe-title {
+  font-size: 2.3em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.recipe-header .recipe-author {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.recipe-body {
+  padding: 20px 15px 10px 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-width: 0 1px 1px 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+.recipe-body h2 {
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe-body ul.ingredients {
+  margin: 0 0 20px 0;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.4em
+}
+
+.recipe-body .ingredients li {
+
+}
+
+.recipe-body p {
+  margin: 0;
+}
+
+.recipe-body .spacer {
+  clear: both;
+  height: 0;
+}

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipes</h1>
+<div class="container">
+  <% @recipes.each do |recipe| %>
+    <div class="recipe">
+      <div class="recipe-header">
+        <h2 class="recipe-title"><%= recipe.title %></h2>
+        <h3 class="recipe-author"><%= recipe.source %></h3>
+      </div>
+      <div class="recipe-body">
+        <ul class="ingredients">
+          <% recipe.ingredients.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+        </ul>
+        <p>
+          <%= recipe.instructions.html_safe %>
+        </p>
+      </div>
+
+      <!-- <td><%= link_to 'Show', recipe %></td>
+      <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+      <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+
+    </div>
+  <% end %>
+</div>
+
+<br class="clear">
+
+<%= link_to 'New Recipe', new_recipe_path %>
