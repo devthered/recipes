@@ -22,11 +22,12 @@ body {
   font-family: "Arial", Arial, sans-serif;
   font-size: 18px;
   line-height: normal;
+  margin: 20px 30px 30px 30px;
 }
 
 h1 {
   color: black;
-  margin: 20px;
+  margin: 0 0 25px 0;
   font-size: 2.5em;
   text-align: center;
 }
