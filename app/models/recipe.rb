@@ -8,6 +8,14 @@ class Recipe
   field :ingredients, type: Array, default: []
   field :instructions, type: String
 
+  def ingredients
+    print_ingredients
+  end
+
+  def get_ingredients
+    self[:ingredients]
+  end
+
   def ingredients=(ingredients)
     if ingredients.respond_to?('split')
       self[:ingredients] = ingredients.split("\n").map { |ingredient| sanitize(ingredient) }
@@ -17,12 +25,12 @@ class Recipe
   end
 
   def instructions=(instructions)
-    self[:instructions] = sanitize(instructions).sub("\n", '<br>')
+    self[:instructions] = sanitize(instructions)
   end
 
   def print_ingredients
     text = ''
-    ingredients.each do |ingredient|
+    self[:ingredients].each do |ingredient|
       text += ingredient + "\n"
     end
     return text
@@ -33,7 +41,6 @@ class Recipe
   
   def sanitize(input)
     conversions = {
-      "\r"  => '',
       '1/2' => '½',
       '1/4' => '¼',
       '1/8' => '⅛',

@@ -49,13 +49,13 @@
   text-decoration: none;
   background-color: inherit;
   color: inherit;
+  border: none;
 }
 
 .recipe-header .recipe-edit-button {
   float: right;
   width: 32px;
   height: 32px;
-  background-color: none;
   margin-top: 5px;
 }
 
@@ -67,6 +67,9 @@
   font-size: 1.2em;
   font-weight: bold;
   margin: 20px 0 0 0;
+  border: none;
+  background-color: initial;
+  color: inherit;
 }
 
 .recipe-body {
@@ -76,25 +79,46 @@
   border-width: 0 1px 1px 1px;
   border-color: black;
   border-style: solid;
+  font-size: 1.0em;
+  line-height: 1.2em
 }
 
-.recipe-body ul.ingredients {
+.recipe-body .ingredients {
   margin: 0 0 20px 0;
   padding: 0 10px 0 0;
   list-style-type: none;
   font-weight: bold;
-  line-height: 1.4em
+  line-height: 1.4em;
 }
 
-.recipe-body .ingredients li {
-
+.recipe-body .ingredients-edit {
+  margin: 0 0 20px 0;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  resize: none;
+  font-family: "Arial", Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
 }
 
-.recipe-body p {
+.recipe-body .instructions-edit {
+  border: none;
+  width: 100%;
   margin: 0;
+  resize: none;
+  font-family: "Arial", Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
 }
 
 .recipe-body .spacer {
   clear: both;
   height: 0;
+}
+
+.recipe-body .actions {
+  margin-top: 15px;
 }

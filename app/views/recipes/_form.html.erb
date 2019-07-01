@@ -1,4 +1,8 @@
 <%= form_with(model: recipe, local: true) do |form| %>
+
+  <%= javascript_include_tag('recipe_form.js') %>
+  
+  <!-- Error Handling -->
   <% if recipe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
@@ -11,32 +15,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="container">
+    <!-- Recipe Edit Form -->
+    <div class="recipe genre-<%= recipe.genre %>">
+      <div class="recipe-header">
+        <%= form.text_field :title, class: 'recipe-title', placeholder: 'title' %>
+        <%= form.text_field :source, class: 'recipe-author', placeholder: 'source or author' %>
+      </div>
+
+      <div class="recipe-body">
+
+        <%= form.text_area :ingredients, class: 'ingredients-edit', placeholder: 'ingredients', id: 'ingredients' %>
+
+        <%= form.text_area :instructions, class: 'instructions-edit', placeholder: 'instructions', id: 'instructions' %>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :source %>
-    <%= form.text_field :source %>
-  </div>
-
-  <div class="field">
-    <%= form.label :genre %>
-    <%= form.text_field :genre %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ingredients %>
-    <%= form.text_area :ingredients%>
-  </div>
-
-  <div class="field">
-    <%= form.label :instructions %>
-    <%= form.text_area :instructions %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
