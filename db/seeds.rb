@@ -8,7 +8,7 @@
 
 Recipe.collection.find.delete_many
 
-puts "adding recipes"
-JSON.parse(File.read('db/recipes.json')).each do |doc|
-  Recipe.collection.insert_one(doc)
-end
+#puts "adding recipes"
+#JSON.parse(File.read('db/recipes.json')).each do |doc|
+#  Recipe.collection.insert_one(doc)
+#end

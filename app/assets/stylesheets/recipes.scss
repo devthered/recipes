@@ -51,6 +51,18 @@
   color: inherit;
 }
 
+.recipe-header .recipe-edit-button {
+  float: right;
+  width: 32px;
+  height: 32px;
+  background-color: none;
+  margin-top: 5px;
+}
+
+.recipe-header .recipe-edit-button:hover {
+  background-color: initial;
+}
+
 .recipe-header .recipe-author {
   font-size: 1.2em;
   font-weight: bold;
