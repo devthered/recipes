@@ -25,7 +25,7 @@
 
       <div class="recipe-body">
 
-        <%= form.text_area :ingredients, class: 'ingredients-edit', placeholder: 'ingredients', id: 'ingredients' %>
+        <%= form.text_area :ingredients, class: 'ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
 
         <%= form.text_area :instructions, class: 'instructions-edit', placeholder: 'instructions', id: 'instructions' %>
 

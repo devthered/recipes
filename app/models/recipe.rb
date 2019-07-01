@@ -8,14 +8,6 @@ class Recipe
   field :ingredients, type: Array, default: []
   field :instructions, type: String
 
-  def ingredients
-    print_ingredients
-  end
-
-  def get_ingredients
-    self[:ingredients]
-  end
-
   def ingredients=(ingredients)
     if ingredients.respond_to?('split')
       self[:ingredients] = ingredients.split("\n").map { |ingredient| sanitize(ingredient) }
