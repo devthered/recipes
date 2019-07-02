@@ -29,6 +29,19 @@ class Recipe
     return text.chomp
   end
 
+  # class methods
+  def self.genres
+    return [
+      'baked',
+      'veggie',
+      'fish',
+      'meat',
+      'nuts',
+      'salad',
+      'sauce'
+    ].sort
+  end
+
   # private methods live down here
   private
   
