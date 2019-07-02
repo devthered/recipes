@@ -37,7 +37,7 @@ input {
   width: 100%;
 }
 
-textarea {
+textarea.pretty-textarea {
   border: none;
   resize: none;
   width: 100%;

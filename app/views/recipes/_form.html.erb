@@ -1,7 +1,7 @@
 <%= form_with(model: recipe, local: true) do |form| %>
 
-  <%= javascript_include_tag('recipe_form.js') %>
-  
+  <%= javascript_include_tag 'pretty-textareas.js' %>
+
   <!-- Error Handling -->
   <% if recipe.errors.any? %>
     <div id="error_explanation">
@@ -25,9 +25,9 @@
 
       <div class="recipe-body">
 
-        <%= form.text_area :ingredients, class: 'ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
+        <%= form.text_area :ingredients, class: 'pretty-textarea ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
 
-        <%= form.text_area :instructions, class: 'instructions-edit', placeholder: 'instructions', id: 'instructions' %>
+        <%= form.text_area :instructions, class: 'pretty-textarea instructions-edit', placeholder: 'instructions', id: 'instructions' %>
 
         <div class="actions">
           <%= form.submit %>
