@@ -10,7 +10,7 @@ class Recipe
 
   def ingredients=(ingredients)
     if ingredients.respond_to?('split')
-      self[:ingredients] = ingredients.split("\n").map { |ingredient| sanitize(ingredient) }
+      self[:ingredients] = ingredients.split("\r\n").map { |ingredient| sanitize(ingredient) }
     else
       self[:ingredients] = ingredients.map { |ingredient| sanitize(ingredient) }
     end
@@ -22,10 +22,11 @@ class Recipe
 
   def print_ingredients
     text = ''
-    self[:ingredients].each do |ingredient|
-      text += ingredient + "\n"
+    self.ingredients.each do |ingredient, i|
+      text += ingredient
+      text += "\n" 
     end
-    return text
+    return text.chomp
   end
 
   # private methods live down here
