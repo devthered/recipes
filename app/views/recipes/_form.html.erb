@@ -18,14 +18,7 @@
     <div class="recipe genre-<%= recipe.genre %>">
       <div class="recipe-header">
         <%= form.text_field :title, class: 'recipe-title', placeholder: 'title' %>
-        
-        <select class="genre-selector" name="genre">
-          <option value="baked">baked good</option>
-          <option value="fish">seafood dish</option>
-          <option value="meat">meat dish</option>
-          <option value="sauce">sauce</option>
-          <option value="veggie">vegetable dish</option>
-        </select> 
+        <%= form.select :genre, Recipe.genres, { include_blank: 'choose genre' }, { class: "genre-selector" } %>
         <%= form.text_field :source, class: 'recipe-author', placeholder: 'source or author' %>
       </div>
 
@@ -43,6 +36,5 @@
   </div>
 
   <%= javascript_include_tag 'pretty-textareas.js' %>
-
 
 <% end %>

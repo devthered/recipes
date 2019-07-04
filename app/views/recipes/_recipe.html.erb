@@ -1,0 +1,19 @@
+<div class="recipe genre-<%= recipe.genre %>">
+  <div class="recipe-header">
+    <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button' do %>
+      <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe' %>
+    <% end %>
+    <%= link_to recipe.title, recipe, class: 'recipe-title' %>
+    <p class="recipe-author"><%= recipe.source %></p>
+  </div>
+  <div class="recipe-body">
+    <ul class="ingredients">
+      <% recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+    </ul>
+    <p>
+      <%= simple_format(recipe.instructions) %>
+    </p>
+  </div>
+</div>
