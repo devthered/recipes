@@ -31,15 +31,11 @@
   border-width: 1px 1px 0 1px;
   border-color: black;
   border-style: solid;
+  position: relative;
 }
 
 .genre-baked .recipe-header {
   background-color: #82793e;
-  color: white;
-}
-
-.genre-veggie .recipe-header {
-  background-color: #47742C;
   color: white;
 }
 
@@ -53,18 +49,13 @@
   color: white;
 }
 
-.genre-nuts .recipe-header {
-  background-color: #7A611D;
-  color: white;
-}
-
-.genre-salad .recipe-header {
-  background-color: #47742C;
-  color: white;
-}
-
 .genre-sauce .recipe-header {
   background-color: #6B2246;
+  color: white;
+}
+
+.genre-veggie .recipe-header {
+  background-color: #47742C;
   color: white;
 }
 
@@ -96,6 +87,12 @@
   border: none;
   background-color: initial;
   color: inherit;
+}
+
+.recipe-header .genre-selector {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
 }
 
 .recipe-body {
@@ -132,11 +129,6 @@
   font-family: "Arial", Arial, sans-serif;
   font-size: 16px;
   line-height: normal;
-}
-
-.recipe-body .spacer {
-  clear: both;
-  height: 0;
 }
 
 .recipe-body .actions {

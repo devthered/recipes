@@ -4,7 +4,7 @@ class Recipe
 
   field :title, type: String
   field :source, type: String
-  field :genre, type: String
+  field :genre, type: String, default: 'veggie'
   field :ingredients, type: Array, default: []
   field :instructions, type: String
 
@@ -33,11 +33,9 @@ class Recipe
   def self.genres
     return [
       'baked',
-      'veggie',
       'fish',
       'meat',
-      'nuts',
-      'salad',
+      'veggie',
       'sauce'
     ].sort
   end
