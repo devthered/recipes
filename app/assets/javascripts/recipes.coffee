@@ -5,3 +5,4 @@
 genre_dropdown = document.getElementsByClassName("genre-selector").item(0)
 recipe_header = document.getElementsByClassName("recipe").item(0)
 genre_dropdown.oninput = () -> recipe_header.className = "recipe genre-" + genre_dropdown.value
+

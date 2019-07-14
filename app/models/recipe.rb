@@ -8,6 +8,10 @@ class Recipe
   field :ingredients, type: Array, default: []
   field :instructions, type: String
 
+  default_scope { order(genre: :asc, title: :asc) }
+
+  validates_presence_of :title, :source, :genre, :ingredients, :instructions
+
   def ingredients=(ingredients)
     if ingredients.respond_to?('split')
       self[:ingredients] = ingredients.split("\r\n").map { |ingredient| sanitize(ingredient) }
