@@ -1,10 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Recipes</h1>
-<div class="container">
-  <%= render partial: "recipe", collection: @recipes %>
+<%= render partial: "recipe", collection: @recipes %>
+
+<div class="clear">
+  <%= link_to 'New Recipe', new_recipe_path %>
 </div>
-
-<br class="clear">
-
-<%= link_to 'New Recipe', new_recipe_path %>

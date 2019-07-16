@@ -13,9 +13,3 @@ for(var i = 0; i < textareas.length; i++)
   };
   updateSize(textarea);
 }
-
-var genre_dropdown = document.getElementsByClassName("genre-selector").item(0);
-var recipe_header = document.getElementsByClassName("recipe").item(0);
-genre_dropdown.oninput = function() {
-  recipe_header.className = "recipe genre-" + genre_dropdown.value;
-};

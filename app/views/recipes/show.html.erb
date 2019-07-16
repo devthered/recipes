@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Single Recipe</h1>
-<div class="container">
-  <%= render partial: "recipe", locals: { recipe: @recipe } %>
-</div>
+<%= render partial: "recipe", locals: { recipe: @recipe } %>
 
 <div class="clear">
   <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
