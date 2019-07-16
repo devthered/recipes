@@ -85,13 +85,40 @@ header {
   box-shadow: 0 0 5px 0 black;
 }
 
+header .header-container {
+  float: right;
+  position: relative;
+  left: -50%;
+}
+
+header .header-container .header-row {
+  position: relative;
+  left: 50%;
+  width: 721px;
+}
+
+@media (max-width: 761px) {
+  header .header-container .header-row {
+    width: 100%;
+  }
+}
+
+header .header-container .header-row .header-col {
+  float: left;
+  width: 33.33%;
+}
+
 header h1 {
   font-size: 2.2em;
   color: white;
   text-align: center;
   font-weight: bold;
-  padding: 0;
   margin: 0;
+}
+
+.genre-filter {
+  float: right;
+  padding: ;
 }
 
 /*

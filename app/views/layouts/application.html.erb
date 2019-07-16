@@ -12,7 +12,24 @@
   <body>
 
     <header>
-      <h1>Recipe Cards</h1>
+
+      <div class="header-container">
+        <div class="header-row">
+          <div class="header-col">
+            <%= text_field_tag "search" %>
+          </div>
+          <div class="header-col">
+            <h1>Recipe Cards</h1>
+          </div>
+          <div class="header-col">
+            <%= select_tag "genre", options_for_select(['all genres'] + Recipe.genres, 'all genres'), class: 'genre-filter' %>
+          </div>
+
+        </div>
+      </div>
+
+
+      
     </header>
 
     <div class="container">
