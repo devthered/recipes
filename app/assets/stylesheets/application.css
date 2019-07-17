@@ -28,7 +28,6 @@ body {
   line-height: normal;
   margin: 0;
   padding: 0;
-  /*margin: 20px 30px 30px 30px;*/
 }
 
 input, textarea, p, li {
@@ -41,13 +40,6 @@ input, textarea, p, li {
 input {
   border: none;
   width: 100%;
-}
-
-textarea.pretty-textarea {
-  border: none;
-  resize: none;
-  width: 100%;
-  height: 1.0em;
 }
 
 h1 {
@@ -108,17 +100,17 @@ header .header-container .header-row .header-col {
 
 .recipe-search {
   font-size: 1.5em;
+  height: 38px;
   width: 200px;
   background-color: inherit;
   color: white;
   border-bottom: 2px solid white;
   padding: 4px 8px;
-  height: 40px;
 }
 
 .search-icon {
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
   border-bottom: 2px solid white;
   position: absolute;
   top: 0px;
@@ -134,9 +126,9 @@ header h1 {
 
 .genre-filter {
   width: 160px;
-  height: 40px;
   float: right;
   margin-right: 20px;
+  bottom: 0;
 }
 
 /*
@@ -144,7 +136,22 @@ header h1 {
  */
 
 /*
- * Pretty Dropdown Menu CSS
+ * Pretty Textarea Styles
+ */
+
+textarea.pretty-textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  height: 1.0em;
+  font-family: "Arial", Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: black;
+}
+
+/*
+ * Pretty Dropdown Styles
  */
 
 /* The container must be positioned relative: */
@@ -152,7 +159,6 @@ header h1 {
   position: relative;
   font-family: Arial;
   font-size: 1.5em;
-  border-bottom: 2px solid white;
 }
 
 .pretty-dropdown select {
@@ -162,6 +168,9 @@ header h1 {
 .select-selected {
   background-color: #1eb5d5;
   padding: 0;
+  height: 38px;
+  border: none;
+  border-bottom: 2px solid white;
 }
 
 /* Style the arrow inside the select element: */
@@ -183,12 +192,15 @@ header h1 {
 }
 
 /* style the items (options), including the selected item: */
-.select-items div,.select-selected {
+.select-items div, .select-selected {
   color: #ffffff;
   padding: 4px 8px;
+  cursor: pointer;
+}
+
+.select-items div, .select-selected.select-arrow-active {
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
 }
 
 /* Style items (options): */
