@@ -18,7 +18,9 @@
     <div class="recipe genre-<%= recipe.genre %>">
       <div class="recipe-header">
         <%= form.text_field :title, class: 'recipe-title', placeholder: 'title' %>
-        <%= form.select :genre, Recipe.genres, { include_blank: 'choose genre' }, { class: "genre-selector" } %>
+        <div class="pretty-dropdown genre-selector">
+          <%= form.select :genre, Recipe.genres %>
+        </div>
         <%= form.text_field :source, class: 'recipe-author', placeholder: 'source or author' %>
       </div>
 
@@ -34,7 +36,5 @@
       </div>
     </div>
   </div>
-
-  <%= javascript_include_tag 'pretty-textareas.js' %>
 
 <% end %>

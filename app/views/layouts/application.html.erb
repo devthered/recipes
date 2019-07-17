@@ -10,35 +10,10 @@
   </head>
 
   <body>
-
-    <header>
-
-      <div class="header-container">
-        <div class="header-row">
-          <div class="header-col">
-            <%= text_field_tag 'search', '', class: 'recipe-search' %>
-          </div>
-          <div class="header-col">
-            <h1>Recipe Cards</h1>
-          </div>
-          <div class="header-col">
-            <%= select_tag "genre", options_for_select(['all genres'] + Recipe.genres, 'all genres'), class: 'genre-filter' %>
-          </div>
-
-        </div>
-      </div>
-
-
-      
-    </header>
-
-    <div class="container">
-      <%= yield %>
-    </div>
-
-    <footer>
-      
-    </footer>
-
+    <%= yield %>
   </body>
+
+  <%= javascript_include_tag 'pretty-dropdowns.js' %>
+  <%= javascript_include_tag 'pretty-textareas.js' %>
+
 </html>

@@ -1,6 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<%= render partial: "recipe", collection: @recipes %>
+<header>
+  <div class="header-container">
+    <div class="header-row">
+      <div class="header-col">
+        <h1>Recipe Cards</h1>
+      </div>
+      <div class="header-col">
+        <div class="pretty-dropdown genre-filter">
+          <%= select_tag "genre", options_for_select(['all genres'] + Recipe.genres, 'all genres') %>
+        </div>
+      </div>
+      <div class="header-col">
+        <%= text_field_tag 'search', '', class: 'recipe-search' %>
+        <%= image_tag asset_path('search.png'), alt: 'Search Recipes', class: 'search-icon' %>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <%= render partial: "recipe", collection: @recipes %>
+</div>
 
 <div class="clear">
   <%= link_to 'New Recipe', new_recipe_path %>
