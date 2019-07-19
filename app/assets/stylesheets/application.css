@@ -81,15 +81,10 @@ header .header-container {
   left: -50%;
 }
 
-header .header-container .header-row {
+header .header-row {
   position: relative;
   left: 50%;
-  width: 721px;
-}
-
-header .header-container .header-row .header-col {
-  float: left;
-  width: 33.33%;
+  width: 761px;
 }
 
 @media (max-width: 761px) {
@@ -100,50 +95,54 @@ header .header-container .header-row .header-col {
   header .header-container .header-row {
     width: 100%;
   }
-
-  header .header-container .header-row .header-col {
-    width: 100%;
-    clear: left;
-  }
-
-  header h1 {
-    text-align: left;
-  }
-}
-
-.recipe-search {
-  font-size: 1.5em;
-  height: 38px;
-  width: 190px;
-  background-color: inherit;
-  color: white;
-  border-bottom: 2px solid white;
-  padding: 4px 8px;
-  float: right;
-}
-
-.search-icon {
-  height: 38px;
-  width: 38px;
-  border-bottom: 2px solid white;
-  float: right;
-  margin-right: 10px;
 }
 
 header h1 {
   font-size: 2.1em;
   color: white;
-  text-align: center;
+  text-align: left;
   font-weight: bold;
+  float: left;
   margin: 0 10px;
 }
 
-.genre-filter {
-  width: 160px;
+.search-form {
   float: right;
+  margin-right: 10px;
+}
+
+.genre-filter {
+  float: left;
+  width: 160px;
   margin-right: 10px;
   bottom: 0;
 }
+
+.recipe-search {
+  float: left;
+  border-bottom: 2px solid white;
+}
+
+.search-button {
+  float: left;
+  background-color: inherit;
+  background-image: url('/assets/search.png');
+  background-size: contain;
+  height: 36px;
+  width: 36px;
+  padding: 0;
+}
+
+.search-box {
+  float: left;
+  font-size: 1.5em;
+  height: 36px;
+  width: 190px;
+  background-color: inherit;
+  color: white;
+  padding: 4px 8px;
+}
+
 
 /*
  * Footer Styles

@@ -44,6 +44,24 @@ class Recipe
     ]
   end
 
+  def self.search(params)
+    search_term_regex = /.*#{params[:search]}.*/i
+    Recipe.filter_by_genre(params[:genre]).or(
+      {title: search_term_regex},
+      {source: search_term_regex},
+      {ingredients: search_term_regex},
+      {instructions: search_term_regex}
+    )
+  end
+
+  def self.filter_by_genre(genre)
+    if genre != ""
+      Recipe.where(genre: genre)
+    else
+      Recipe.all
+    end
+  end
+
   # private methods live down here
   private
   
