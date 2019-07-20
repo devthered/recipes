@@ -29,23 +29,33 @@
   position: relative;
 }
 
-.genre-baked .recipe-header {
+.genre-baked .recipe-header,
+.genre-baked .select-items,
+.genre-baked .select-selected {
   background-color: #82793e;
 }
 
-.genre-meat .recipe-header {
+.genre-meat .recipe-header,
+.genre-meat .select-items,
+.genre-meat .select-selected {
   background-color: #8C1A11;
 }
 
-.genre-sauce .recipe-header {
+.genre-sauce .recipe-header,
+.genre-sauce .select-items,
+.genre-sauce .select-selected {
   background-color: #6B2246;
 }
 
-.genre-seafood .recipe-header {
+.genre-seafood .recipe-header,
+.genre-seafood .select-items,
+.genre-seafood .select-selected {
   background-color: #264483;
 }
 
-.genre-veggie .recipe-header {
+.genre-veggie .recipe-header,
+.genre-veggie .select-items,
+.genre-veggie .select-selected {
   background-color: #47742C;
 }
 

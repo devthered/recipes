@@ -85,6 +85,7 @@ header .header-row {
   position: relative;
   left: 50%;
   width: 761px;
+  padding: 0 10px;
 }
 
 @media (max-width: 761px) {
@@ -103,12 +104,11 @@ header h1 {
   text-align: left;
   font-weight: bold;
   float: left;
-  margin: 0 10px;
+  margin: 0;
 }
 
 .search-form {
   float: right;
-  margin-right: 10px;
 }
 
 .genre-filter {
