@@ -4,6 +4,7 @@
       <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe' %>
     <% end %>
     <%= link_to recipe.title, recipe, class: 'recipe-title' %>
+    <div class="spacer"></div>
     <p class="recipe-author"><%= recipe.source %></p>
   </div>
   <div class="recipe-body">

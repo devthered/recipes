@@ -15,7 +15,7 @@
  */
 
 /*
- * General Styles
+ * Application Formatting Styles
  */
 
 * {
@@ -85,7 +85,7 @@ header .header-row {
   position: relative;
   left: 50%;
   width: 761px;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 @media (max-width: 761px) {
@@ -105,42 +105,6 @@ header h1 {
   font-weight: bold;
   float: left;
   margin: 0;
-}
-
-.search-form {
-  float: right;
-}
-
-.genre-filter {
-  float: left;
-  width: 160px;
-  margin-right: 10px;
-  bottom: 0;
-}
-
-.recipe-search {
-  float: left;
-  border-bottom: 2px solid white;
-}
-
-.search-button {
-  float: left;
-  background-color: inherit;
-  background-image: url('/assets/search.png');
-  background-size: contain;
-  height: 36px;
-  width: 36px;
-  padding: 0;
-}
-
-.search-box {
-  float: left;
-  font-size: 1.5em;
-  height: 36px;
-  width: 190px;
-  background-color: inherit;
-  color: white;
-  padding: 4px 8px;
 }
 
 

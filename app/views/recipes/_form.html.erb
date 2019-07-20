@@ -1,19 +1,19 @@
 <%= form_with(model: recipe, local: true) do |form| %>
+  <div class="container">
 
   <!-- Error Handling -->
-  <% if recipe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+    <% if recipe.errors.any? %>
+      <div id="error_explanation" class="recipe">
+        <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
-      <ul>
-      <% recipe.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <ul>
+        <% recipe.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <div class="container">
     <!-- Recipe Edit Form -->
     <div class="recipe genre-<%= recipe.genre %>">
       <div class="recipe-header">
@@ -21,22 +21,21 @@
         <div class="pretty-dropdown genre-selector">
           <%= form.select :genre, Recipe.genres %>
         </div>
+        <div class="spacer"></div>
         <%= form.text_field :source, class: 'recipe-author', placeholder: 'source or author' %>
       </div>
 
       <div class="recipe-body">
-
         <%= form.text_area :ingredients, class: 'pretty-textarea ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
-
+        <div class="spacer"></div>
         <%= form.text_area :instructions, class: 'pretty-textarea instructions-edit', placeholder: 'instructions', id: 'instructions' %>
-
         <div class="actions">
           <%= form.submit %>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
 <% end %>
 
 <%= javascript_include_tag 'recipe-edit.js' %>

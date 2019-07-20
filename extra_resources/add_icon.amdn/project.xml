@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <Document serializeVersion="11">
-    <InterfaceSettings canvasscale="21.68" canvasrect="-9.9631,-2.09871,48.6162,36.5314" />
+    <InterfaceSettings canvasscale="11.35" canvasrect="-18.0617,-4.14097,92.8634,69.7797" />
     <Drawing snapgrid="0" gridback="1" sheetmovecontent="1" measurementunits="5" guidesvisible="1" guideslocked="0" scalestrokeandeffects="0" issheetdependentrulers="1" marginsenabled="0" margins="0,0,0,0" bleedsenabled="0" bleeds="0,0,0,0" colorformat="0" effectsPpi="150">
         <Sheets count="1" activesheet="0">
-            <_0 name="Sheet 1" bound="0,0,32,32" enabled="1" />
+            <_0 name="Sheet 1" bound="0,0,60,60" enabled="1" />
         </Sheets>
         <swatches>
             <colorpalette count="22">
@@ -227,10 +227,10 @@
         <Grid size="100,100" subdivisionx="2" subdivisiony="2" color="0.5,0.5,0.5,0.5" visible="0" />
         <Objects count="1" activelayer="0">
             <_0 class="Layer" name="Layer 2" visible="1" printable="1" locked="0" opacity="1" blendmode="0" unfolded="1" selectioncolor="0.97,0.38,0.45,1">
-                <Objects count="3">
-                    <_0 class="PathShape" name="Shape 15" visible="1" printable="1" locked="0" opacity="1" blendmode="0" unfolded="0" ctm="(8.458181381225586,0, 0,8.253177642822266, 22.74102783203125,0.8371539711952209)" pivotPoint="0.5,0.5" d="M 0.731251597 1 C 0.826723635 0.899767578 1.20708764 0.598267913 0.850158632 0.212106615 C 0.433601528 -0.23856616 0.0940053761 0.154410094 -4.4408921e-16 0.249549285 " autoclosed="0" handlesArray="F1 M 0.731251597 1 L -4.4408921e-16 0.249549285 ">
+                <Objects count="2">
+                    <_0 class="PathShape" name="Path" visible="1" printable="1" locked="0" opacity="1" blendmode="0" unfolded="0" ctm="(51.12004470825195,0, 0,1.192092895507812e-07, 4.38498067855835,30)" pivotPoint="0.5,0.5" d="M 0 0 C 0 0 1 0 1 0 " autoclosed="0" handlesArray="F1 M 0 0 L 1 0 ">
                         <drawers count="2">
-                            <_0 class="0" name="Stroke" enabled="1" opacity="1" blendmode="0" fillmode="0" stroke="1" salign="0" smode="0">
+                            <_0 class="0" name="Stroke" enabled="1" opacity="1" blendmode="0" fillmode="0" stroke="3" salign="0" smode="0">
                                 <solidfiller fill="1,1,1,1" />
                                 <gradientfiller startpoint="0,0.5" endpoint="1,0.5" middlepoint="0,0" gradientroundness="1" gradientstyle="0">
                                     <gradient count="2">
@@ -242,8 +242,8 @@
                                 <arrows startarrowstyle="0" startarrowscale="1" endarrowstyle="0" endarrowscale="1" />
                                 <brush angle="0.785398" roundness="0.333333" />
                             </_0>
-                            <_1 class="1" name="Fill" enabled="1" opacity="1" blendmode="0" fillmode="0" winding="0">
-                                <solidfiller fill="1,1,1,1" />
+                            <_1 class="1" name="Fill" enabled="0" opacity="1" blendmode="0" fillmode="0" winding="0">
+                                <solidfiller fill="0.666667,0.666667,0.666667,1" />
                                 <gradientfiller startpoint="0,0.5" endpoint="1,0.5" middlepoint="0,0" gradientroundness="1" gradientstyle="0">
                                     <gradient count="2">
                                         <_0 color="0,0,0,1" colorlocation="0" />
@@ -253,9 +253,9 @@
                             </_1>
                         </drawers>
                     </_0>
-                    <_1 class="PathShape" name="Shape 16" visible="1" printable="1" locked="0" opacity="1" blendmode="0" unfolded="0" ctm="(22.58693504333496,0, 0,22.60306358337402, 5.497927188873291,3.791749954223633)" pivotPoint="0.5,0.5" d="M 0.725153327 0 C 0.466014624 0.257247925 0.259138793 0.462614059 0 0.719861984 C 0 0.719861984 0.267519772 1 0.267519772 1 C 0.531190693 0.737463057 0.736328959 0.539202511 1 0.276665568 C 1 0.276665568 0.725153327 0 0.725153327 0 Z " autoclosed="0" handlesArray="F1 M 0.755770326 -0.0303936899 L 0.755770326 -0.0303936899 ">
+                    <_1 class="PathShape" name="Path" visible="1" printable="1" locked="0" opacity="1" blendmode="0" unfolded="0" ctm="(-2.234528211155043e-06,-51.12004470825188, 1.192092895507811e-07,-5.210803747399139e-15, 29.23450660705566,55.56002044677734)" pivotPoint="0.5,0.5" d="M 0 0 C 0 0 1 0 1 0 " autoclosed="0" handlesArray="F1 M 0 0 L 1 0 ">
                         <drawers count="2">
-                            <_0 class="0" name="Stroke" enabled="1" opacity="1" blendmode="0" fillmode="0" stroke="1" salign="0" smode="0">
+                            <_0 class="0" name="Stroke" enabled="1" opacity="1" blendmode="0" fillmode="0" stroke="3" salign="0" smode="0">
                                 <solidfiller fill="1,1,1,1" />
                                 <gradientfiller startpoint="0,0.5" endpoint="1,0.5" middlepoint="0,0" gradientroundness="1" gradientstyle="0">
                                     <gradient count="2">
@@ -267,8 +267,8 @@
                                 <arrows startarrowstyle="0" startarrowscale="1" endarrowstyle="0" endarrowscale="1" />
                                 <brush angle="0.785398" roundness="0.333333" />
                             </_0>
-                            <_1 class="1" name="Fill" enabled="1" opacity="1" blendmode="0" fillmode="0" winding="0">
-                                <solidfiller fill="1,1,1,1" />
+                            <_1 class="1" name="Fill" enabled="0" opacity="1" blendmode="0" fillmode="0" winding="0">
+                                <solidfiller fill="0.666667,0.666667,0.666667,1" />
                                 <gradientfiller startpoint="0,0.5" endpoint="1,0.5" middlepoint="0,0" gradientroundness="1" gradientstyle="0">
                                     <gradient count="2">
                                         <_0 color="0,0,0,1" colorlocation="0" />
@@ -278,31 +278,6 @@
                             </_1>
                         </drawers>
                     </_1>
-                    <_2 class="PathShape" name="Shape 11" visible="1" printable="1" locked="0" opacity="1" blendmode="0" unfolded="0" ctm="(8.764093399047852,0, 0,8.910743713378906, 1.475286483764648,21.44770431518555)" pivotPoint="0.5,0.5" d="M 0.299967736 0 C 0.24775213 0.051213067 0.195536524 0.102426134 0.143320903 0.153639197 C 0.0955472663 0.435759604 0.0477736332 0.717879832 0 1 C 0.28864032 0.941033363 0.577280641 0.882066786 0.865920961 0.823099911 C 0.865920961 0.823099911 0.929609358 0.777875602 1 0.710070789 C 1 0.710070789 0.299967736 0 0.299967736 0 Z " autoclosed="0" handlesArray="F1 M 0.299967736 0 L 0.299967736 0 ">
-                        <drawers count="2">
-                            <_0 class="0" name="Stroke" enabled="1" opacity="1" blendmode="0" fillmode="0" stroke="1" salign="0" smode="0">
-                                <solidfiller fill="1,1,1,1" />
-                                <gradientfiller startpoint="0,0.5" endpoint="1,0.5" middlepoint="0,0" gradientroundness="1" gradientstyle="0">
-                                    <gradient count="2">
-                                        <_0 color="0,0,0,1" colorlocation="0" />
-                                        <_1 color="1,0,0,1" colorlocation="1" />
-                                    </gradient>
-                                </gradientfiller>
-                                <style linecapstyle="0" linejoinstyle="0" flatness="0.1" miterlimit="10" linedashphase="0" />
-                                <arrows startarrowstyle="0" startarrowscale="1" endarrowstyle="0" endarrowscale="1" />
-                                <brush angle="0.785398" roundness="0.333333" />
-                            </_0>
-                            <_1 class="1" name="Fill" enabled="1" opacity="1" blendmode="0" fillmode="0" winding="0">
-                                <solidfiller fill="1,1,1,1" />
-                                <gradientfiller startpoint="0,0.5" endpoint="1,0.5" middlepoint="0,0" gradientroundness="1" gradientstyle="0">
-                                    <gradient count="2">
-                                        <_0 color="0,0,0,1" colorlocation="0" />
-                                        <_1 color="1,0,0,1" colorlocation="1" />
-                                    </gradient>
-                                </gradientfiller>
-                            </_1>
-                        </drawers>
-                    </_2>
                 </Objects>
             </_0>
         </Objects>

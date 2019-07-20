@@ -1,6 +1,6 @@
-// Place all the styles related to the Recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+ * Recipe Container Styles
+ */
 
 .recipe {
   position: relative;
@@ -17,8 +17,19 @@
   }
 }
 
+.spacer {
+  height: 20px;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Recipe Header Styles
+ */
+
 .recipe-header {
-  background-color: black;
+  background-color: #1eb5d5;
   color: white;
   padding: 10px 15px;
   border-top-right-radius: 10px;
@@ -28,6 +39,69 @@
   border-style: solid;
   position: relative;
 }
+
+.recipe-header .recipe-title {
+  font-size: 2.3em;
+  line-height: normal;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+
+.recipe-header .recipe-edit-button {
+  float: right;
+  margin-top: 5px;
+}
+
+.recipe-header .recipe-edit-button:hover {
+  background-color: initial;
+}
+
+.recipe-header .recipe-edit-button img {
+  width: 32px;
+  height: 32px;
+}
+
+.recipe-header .recipe-author {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  background-color: initial;
+  color: inherit;
+}
+
+/*
+ * Recipe Body Styles
+ */
+
+.recipe-body {
+  padding: 20px 15px 10px 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-width: 0 1px 1px 1px;
+  border-color: black;
+  border-style: solid;
+  font-size: 1.0em;
+  line-height: 1.2em;
+}
+
+.recipe-body ul.ingredients {
+  margin: 0 0 20px 0;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+}
+
+.recipe-body ul.ingredients li {
+  font-weight: bold;
+  line-height: 1.4em;
+}
+
+/*
+ * Recipe Genre-Specific Styles
+ */
 
 .genre-baked .recipe-header,
 .genre-baked .select-items,
@@ -59,35 +133,9 @@
   background-color: #47742C;
 }
 
-.recipe-header .recipe-title {
-  font-size: 2.3em;
-  line-height: normal;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: inherit;
-  color: inherit;
-  border: none;
-}
-
-.recipe-header .recipe-edit-button {
-  float: right;
-  width: 32px;
-  height: 32px;
-  margin-top: 5px;
-}
-
-.recipe-header .recipe-edit-button:hover {
-  background-color: initial;
-}
-
-.recipe-header .recipe-author {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 20px 0 0 0;
-  border: none;
-  background-color: initial;
-  color: inherit;
-}
+/*
+ * Recipe Edit Styles
+ */
 
 .recipe-header .genre-selector {
   position: absolute;
@@ -96,30 +144,7 @@
   width: 160px;
 }
 
-.recipe-body {
-  padding: 20px 15px 10px 15px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-width: 0 1px 1px 1px;
-  border-color: black;
-  border-style: solid;
-  font-size: 1.0em;
-  line-height: 1.2em;
-}
-
-.recipe-body ul.ingredients {
-  margin: 0 0 20px 0;
-  padding: 0 10px 0 0;
-  list-style-type: none;
-}
-
-.recipe-body ul.ingredients li {
-  font-weight: bold;
-  line-height: 1.4em;
-}
-
 .recipe-body .ingredients-edit {
-  margin: 0 0 20px 0;
   padding: 0 10px 0 0;
   font-weight: bold;
   line-height: 1.4em;
@@ -139,4 +164,67 @@
 .recipe-body .actions input {
   padding: 5px;
   height: 100%;
+}
+
+/**
+ * Search Form Styles
+ */ 
+
+.search-form {
+  float: right;
+}
+
+.genre-filter {
+  float: left;
+  width: 160px;
+  margin-right: 10px;
+  bottom: 0;
+}
+
+.recipe-search {
+  float: left;
+  border-bottom: 2px solid white;
+}
+
+.search-box {
+  float: left;
+  font-size: 1.5em;
+  height: 36px;
+  width: 190px;
+  background-color: inherit;
+  color: white;
+  padding: 4px 8px;
+}
+
+.search-button {
+  float: left;
+  background-color: transparent;
+  background-image: url('/assets/search.png');
+  background-size: contain;
+  height: 36px;
+  width: 36px;
+  padding: 0;
+}
+
+/*
+ * Add Recipe Button Styles
+ */
+
+.add-recipe-button {
+  float: right;
+  height: 36px;
+  width: 36px;
+  margin-left: 10px;
+  padding: 2px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.add-recipe-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.add-recipe-button img {
+  height: 100%;
+  width: 100%;
 }
