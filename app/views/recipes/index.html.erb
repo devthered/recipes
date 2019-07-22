@@ -4,7 +4,7 @@
   <div class="header-container">
     <div class="header-row">
       <h1>Recipe Cards</h1>
-      <%= link_to new_recipe_path, class: 'add-recipe-button' do %>
+      <%= link_to new_recipe_path, class: 'nav-button' do %>
         <%= image_tag asset_path('add.png'), alt: 'New Recipe', title: 'New Recipe' %>
       <% end %>
       <%= form_with url: recipes_path, method: 'get', id: 'search_form', class: 'search-form' do |form| %>

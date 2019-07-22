@@ -177,10 +177,10 @@
 }
 
 /*
- * Add Recipe Button Styles
+ * Nav Button Styles
  */
 
-.add-recipe-button {
+.nav-button {
   float: right;
   height: 36px;
   width: 36px;
@@ -190,11 +190,11 @@
   border: 2px solid white;
 }
 
-.add-recipe-button:hover {
+.nav-button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.add-recipe-button img {
+.nav-button img {
   height: 100%;
   width: 100%;
 }

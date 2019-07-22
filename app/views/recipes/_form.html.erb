@@ -15,9 +15,15 @@
   <!-- Recipe Edit Form -->
   <div class="recipe genre-<%= recipe.genre %>">
     <div class="recipe-header">
-      <%= link_to @recipe, method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' }, class: 'delete-recipe-button' do %>
-        <%= image_tag asset_path('delete.png'), alt: 'Delete Recipe', title: 'Delete Recipe' %>
+
+      <!-- Show 'delete' button for recipe if exists -->
+      <% if not Recipe.where(id: recipe.id).empty? %>
+        <%= link_to @recipe, method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' }, class: 'delete-recipe-button' do %>
+          <%= image_tag asset_path('delete.png'), alt: 'Delete Recipe', title: 'Delete Recipe' %>
+        <% end %>
       <% end %>
+
+      <!-- Edit recipe title, author, and genre -->
       <%= form.text_field :title, class: 'recipe-title', placeholder: 'title' %>
       <div class="pretty-dropdown genre-selector">
         <%= form.select :genre, Recipe.genres %>
@@ -26,6 +32,7 @@
       <%= form.text_field :source, class: 'recipe-author', placeholder: 'source or author' %>
     </div>
 
+    <!-- Edit recipe ingredients and istructions -->
     <div class="recipe-body">
       <%= form.text_area :ingredients, class: 'pretty-textarea ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
       <div class="spacer"></div>
