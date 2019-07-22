@@ -49,6 +49,7 @@
   background-color: inherit;
   color: inherit;
   border: none;
+  width: calc(100% - 46px);
 }
 
 .recipe-header .recipe-edit-button {
@@ -72,6 +73,7 @@
   border: none;
   background-color: initial;
   color: inherit;
+  width: calc(100% - 170px);
 }
 
 /*
@@ -135,39 +137,6 @@
 }
 
 /*
- * Recipe Edit Styles
- */
-
-.recipe-header .genre-selector {
-  position: absolute;
-  bottom: 10px;
-  right: 15px;
-  width: 160px;
-}
-
-.recipe-body .ingredients-edit {
-  padding: 0 10px 0 0;
-  font-weight: bold;
-  line-height: 1.4em;
-}
-
-.recipe-body .instructions-edit {
-  margin: 0;
-  font-family: "Arial", Arial, sans-serif;
-  font-size: 16px;
-  line-height: normal;
-}
-
-.recipe-body .actions {
-  margin-top: 15px;
-}
-
-.recipe-body .actions input {
-  padding: 5px;
-  height: 100%;
-}
-
-/**
  * Search Form Styles
  */ 
 
@@ -228,4 +197,63 @@
 .add-recipe-button img {
   height: 100%;
   width: 100%;
+}
+
+/*
+ * Recipe Edit Styles
+ */
+
+.recipe-header .genre-selector {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  width: 160px;
+}
+
+.recipe-body .ingredients-edit {
+  padding: 0 10px 0 0;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+
+.recipe-body .instructions-edit {
+  margin: 0;
+  font-family: "Arial", Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.recipe-body .actions {
+  margin-top: 15px;
+}
+
+.recipe-body .actions input {
+  padding: 5px;
+  height: 100%;
+}
+
+/*
+ * Delete Recipe Button Styles
+ */
+
+.delete-recipe-button {
+  position: absolute;
+  right: 15px;
+  z-index: 99;
+  height: 36px;
+  width: 36px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid white;
+  padding: 2px;
+}
+
+.delete-recipe-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.delete-recipe-button img {
+  height: 100%;
+  width: 100%;
+  z-index: 99;
 }

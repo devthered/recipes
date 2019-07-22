@@ -1,7 +1,7 @@
 <div class="recipe genre-<%= recipe.genre %>">
   <div class="recipe-header">
     <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button' do %>
-      <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe' %>
+      <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe', title: 'Edit Recipe' %>
     <% end %>
     <p class="recipe-title"><%= recipe.title %></p>
     <div class="spacer"></div>

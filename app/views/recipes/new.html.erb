@@ -1,5 +1,16 @@
-<%= render 'form', recipe: @recipe %>
+<header>
+  <div class="header-container">
+    <div class="header-row">
+      <h1>New Recipe</h1>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="spacer"></div>
+  <%= render 'form', recipe: @recipe %>
+</div>
 
 <div class="clear">
-  <%= link_to 'Back', recipes_path %>
+  <%= link_to 'Back', recipes_path %> |
 </div>

@@ -5,7 +5,7 @@
     <div class="header-row">
       <h1>Recipe Cards</h1>
       <%= link_to new_recipe_path, class: 'add-recipe-button' do %>
-        <%= image_tag asset_path('add.png'), alt: 'New Recipe' %>
+        <%= image_tag asset_path('add.png'), alt: 'New Recipe', title: 'New Recipe' %>
       <% end %>
       <%= form_with url: recipes_path, method: 'get', id: 'search_form', class: 'search-form' do |form| %>
         <div class="pretty-dropdown genre-filter">
@@ -13,7 +13,7 @@
         </div>
         <div class="recipe-search">
           <%= form.text_field :search, value: params[:search], class: 'search-box' %>
-          <%= form.submit '', name: nil, class: 'search-button' %>
+          <%= form.submit '', name: nil, title: 'Search', class: 'search-button' %>
         </div>
       <% end %>
     </div>
@@ -22,9 +22,6 @@
 
 <div id="recipes" class="container">
   <%= render partial: "recipe", collection: @recipes %>
-</div>
-
-<div class="clear">
 </div>
 
 <%= javascript_include_tag 'recipe-search.js' %>

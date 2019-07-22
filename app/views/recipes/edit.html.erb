@@ -1,8 +1,16 @@
-<%= render 'form', recipe: @recipe %>
+<header>
+  <div class="header-container">
+    <div class="header-row">
+      <h1>Editing Recipe</h1>
+    </div>
+  </div>
+</header>
 
-<div class="clear">
-  <%= link_to 'Show', @recipe %> |
-  <%= link_to 'Back', recipes_path %> |
-  <%= link_to 'Destroy', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="container">
+  <div class="spacer"></div>
+  <%= render 'form', recipe: @recipe %>
 </div>
 
+<div class="clear">
+  <%= link_to 'Back', recipes_path %>
+</div>
