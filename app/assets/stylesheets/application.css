@@ -75,13 +75,13 @@ header {
   box-shadow: 0 0 5px 0 black;
 }
 
-header .header-container {
+.header-container {
   float: right;
   position: relative;
   left: -50%;
 }
 
-header .header-row {
+.header-row {
   position: relative;
   left: 50%;
   width: 761px;
@@ -89,11 +89,11 @@ header .header-row {
 }
 
 @media (max-width: 761px) {
-  header .header-container {
+  .header-container {
     width: 100%;
   }
 
-  header .header-container .header-row {
+  .header-container .header-row {
     width: 100%;
   }
 }
@@ -111,6 +111,32 @@ header h1 {
 /*
  * Footer Styles
  */
+
+ footer {
+  clear: both;
+  height: 48px;
+  width: 100%;
+  padding: 8px 0;
+  box-shadow: 0 0 5px 0 black;
+  background-color: #1eb5d5;
+  color: white;
+}
+
+footer h3 {
+  width: 100%;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  font-size: 1.7em;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 /*
  * Pretty Textarea Styles
