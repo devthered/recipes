@@ -15,7 +15,7 @@
  */
 
 /*
- * Application Formatting Styles
+ * Global Application Formatting Styles
  */
 
 * {
@@ -49,6 +49,10 @@ h1 {
   text-align: center;
 }
 
+.clear {
+  clear: both;
+}
+
 .container {
   float: right;
   position: relative;
@@ -57,9 +61,79 @@ h1 {
   margin-top: 60px;
 }
 
-.clear {
-  clear: both;
+.spacer {
+  height: 20px;
+  width: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/*
+ * Card Styles
+ */
+
+.card,
+.recipe {
+  position: relative;
+  left: 50%;
+  width: 721px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 761px) {
+  .card,
+  .recipe {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+  }
+}
+
+.card-header,
+.recipe-header {
+  background-color: #1eb5d5;
+  color: white;
+  padding: 10px 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-width: 1px 1px 0 1px;
+  border-color: black;
+  border-style: solid;
+  position: relative;
+}
+
+.card-header .card-title,
+.recipe-header .recipe-title {
+  margin: 0;
+  font-size: 2.3em;
+  line-height: normal;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+
+.card-header .card-title {
+  width: 100%;
+}
+
+.recipe-header .recipe-title {
+  width: calc(100% - 46px);
+}
+
+.card-body,
+.recipe-body {
+  padding: 20px 15px 10px 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-width: 0 1px 1px 1px;
+  border-color: black;
+  border-style: solid;
+  font-size: 1.0em;
+  line-height: 1.2em;
+}
+
 
 /*
  * Header Styles

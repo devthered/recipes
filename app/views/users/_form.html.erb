@@ -1,6 +1,6 @@
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
-    <div id="error_explanation", class="recipe">
+    <div id="error_explanation", class="card">
         <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
       <ul>
       <% user.errors.full_messages.each do |message| %>
@@ -10,14 +10,15 @@
     </div>
   <% end %>
 
-  <div class="recipe">
-    <div class="recipe-header">
-      <%= form.text_field :name, placeholder: 'your name', class: 'recipe-title' %>
+  <div class="card">
+    <div class="card-header">
+      <%= form.text_field :name, placeholder: 'your name', class: 'card-title' %>
     </div>
-    <div class="recipe-body">
-      <%= form.text_field :email, placeholder: 'email address', class: 'instructions-edit' %>
+    <div class="card-body">
+      <%= form.text_field :email, placeholder: 'email address' %>
       <div class="spacer"></div>
-      <%= form.password_field :password, placeholder: 'secure password', class: 'instructions-edit' %>
+      <%= form.password_field :password, placeholder: 'secure password' %>
+      <div class="spacer"></div>
 
       <div class="actions">
         <%= form.submit %>
