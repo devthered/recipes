@@ -1,14 +1,29 @@
+<header>
+  <div class="header-container">
+    <div class="header-row">
+      <h1>User Profile</h1>
+      <%= link_to recipes_path, class: 'nav-button' do %>
+        <%= image_tag asset_path('back.png'), alt: 'Back to Browse', title: 'Back to Browse' %>
+      <% end %>
+    </div>
+  </div>
+</header>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <%= link_to edit_user_path(@user), class: 'edit-button' do %>
+        <%= image_tag asset_path('edit.png'), alt: 'Edit Profile', title: 'Edit Profile' %>
+      <% end %>
+      <p class="card-title"><%= @user.name %></p>
+    </div>
+    <div class="card-body">
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+    </div>
+  </div>
+</div>

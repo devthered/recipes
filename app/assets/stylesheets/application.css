@@ -122,6 +122,23 @@ h1 {
   width: calc(100% - 46px);
 }
 
+.card-header .edit-button,
+.recipe-header .recipe-edit-button {
+  float: right;
+  margin-top: 5px;
+}
+
+.card-header .edit-button:hover,
+.recipe-header .recipe-edit-button:hover {
+  background-color: initial;
+}
+
+.card-header .edit-button img,
+.recipe-header .recipe-edit-button img {
+  width: 32px;
+  height: 32px;
+}
+
 .card-body,
 .recipe-body {
   padding: 20px 15px 10px 15px;
