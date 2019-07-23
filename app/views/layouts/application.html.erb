@@ -21,6 +21,18 @@
       </div>
     </header>
 
+    <!-- TODO: fix this formatting -->
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="card alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
 
     <footer>

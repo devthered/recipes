@@ -49,6 +49,10 @@ h1 {
   text-align: center;
 }
 
+label {
+  margin-bottom: 5px;
+}
+
 .clear {
   clear: both;
 }
@@ -58,7 +62,6 @@ h1 {
   position: relative;
   left: -50%;
   text-align: left;
-  margin-top: 60px;
 }
 
 .spacer {
@@ -149,6 +152,41 @@ h1 {
   border-style: solid;
   font-size: 1.0em;
   line-height: 1.2em;
+}
+
+/*
+ * Alert Styles
+ */
+
+.alert {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  border: 1px solid;
+}
+
+.alert-danger,
+.alert-danger li {
+  background-color: #f9d9d8;
+  border-color: #af7370;
+  color: #af7370;
+}
+
+.alert-notice {
+  background-color: #d9eff9;
+  border-color: #709aaf;
+  color: #709aaf;
+}
+
+.alert-success {
+  background-color: #e4f9d9;
+  border-color: #84af70;
+  color: #84af70;
+}
+
+.field_with_errors {
+  display: block;
 }
 
 

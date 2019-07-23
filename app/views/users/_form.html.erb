@@ -1,23 +1,28 @@
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
-    <div id="error_explanation", class="card">
-        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <div class="card alert alert-danger">
+      There are <%= pluralize(user.errors.count, "error") %> with your user info:
       <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="card">
     <div class="card-header">
-      <%= form.text_field :name, placeholder: 'your name', class: 'card-title' %>
+      <p class="card-title">Sign Up</p>
     </div>
     <div class="card-body">
-      <%= form.text_field :email, placeholder: 'email address' %>
+      <%= form.label 'Full Name:' %>
+      <%= form.text_field :name, placeholder: 'Cauli Flower' %>
       <div class="spacer"></div>
-      <%= form.password_field :password, placeholder: 'secure password' %>
+      <%= form.label 'Email:' %>
+      <%= form.email_field :email, placeholder: 'name@example.com' %>
+      <div class="spacer"></div>
+      <%= form.label 'Password:' %>
+      <%= form.password_field :password, placeholder: 'make it a good one' %>
       <div class="spacer"></div>
 
       <div class="actions">

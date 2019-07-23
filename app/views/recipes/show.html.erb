@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <div class="container">
+    <div class="card alert alert-notice">
+      <p id="notice"><%= notice %></p>
+    </div>
+  </div>
+<% end %>
 
 <div class="container">
   <%= render partial: "recipe", locals: { recipe: @recipe } %>
