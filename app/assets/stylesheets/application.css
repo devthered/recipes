@@ -208,7 +208,7 @@ header h1 {
   height: 48px;
   width: 100%;
   padding: 8px 0;
-  box-shadow: 0 0 5px 0 black;
+  box-shadow: 0 -5px 5px -5px black;
   background-color: #1eb5d5;
   color: white;
 }
