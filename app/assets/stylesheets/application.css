@@ -246,6 +246,27 @@ header h1 {
   margin: 0;
 }
 
+header nav {
+  position: relative;
+  float: right;
+  font-size: 1.5em;
+  color: white;
+  padding-top: 0.25em;
+}
+
+header nav a,
+header nav a:hover,
+header nav a:visited {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 2px 5px;
+}
+
+header nav a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 
 /*
  * Footer Styles
@@ -313,6 +334,10 @@ textarea.pretty-textarea {
   height: 38px;
   border: none;
   border-bottom: 2px solid white;
+}
+
+.select-selected:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Style the arrow inside the select element: */
