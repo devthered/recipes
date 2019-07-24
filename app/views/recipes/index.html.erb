@@ -18,14 +18,6 @@
   </div>
 </header>
 
-<% if notice %>
-  <div class="container">
-    <div class="card alert alert-notice">
-      <p id="notice"><%= notice %></p>
-    </div>
-  </div>
-<% end %>
-
 <div id="recipes" class="container">
   <%= render partial: "recipe", collection: @recipes %>
 </div>

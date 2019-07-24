@@ -64,6 +64,13 @@ label {
   text-align: left;
 }
 
+.header-spacer {
+  height: 80px;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .spacer {
   height: 20px;
   width: 0;
@@ -167,12 +174,15 @@ label {
 }
 
 .alert-danger,
-.alert-danger li {
+.alert-danger li,
+.alert-error,
+.alert-error li {
   background-color: #f9d9d8;
   border-color: #af7370;
   color: #af7370;
 }
 
+.alert-alert,
 .alert-notice {
   background-color: #d9eff9;
   border-color: #709aaf;
