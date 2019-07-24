@@ -37,11 +37,6 @@ input, textarea, p, li {
   color: black;
 }
 
-input {
-  border: none;
-  width: 100%;
-}
-
 h1 {
   color: black;
   margin: 0 0 25px 0;
@@ -76,6 +71,32 @@ label {
   width: 0;
   margin: 0;
   padding: 0;
+}
+
+/*
+ * Form Styles
+ */
+
+input {
+  border: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type=submit] {
+  margin-bottom: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+input[type=checkbox] {
+  display: inline;
+  height: 1em;
+  width: 1em;
 }
 
 /*

@@ -7,10 +7,12 @@
       <div class="card-body">
         <%= form.label 'Email:' %>
         <%= form.email_field :email, placeholder: 'name@example.com' %>
-        <div class="spacer"></div>
         <%= form.label 'Password:' %>
         <%= form.password_field :password, placeholder: 'password' %>
-        <div class="spacer"></div>
+        <%= form.label :remember_me do %>
+          <%= form.check_box :remember_me %>
+          <span>Stay logged in on this computer</span>
+        <% end %>
         <div class="actions">
           <%= form.submit 'Log In' %>
         </div>
