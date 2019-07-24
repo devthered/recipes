@@ -11,6 +11,9 @@
         <strong>Email:</strong>
         <%= @user.email %>
       </p>
+      <% if @user.admin? %>
+        <p>This user has administrator rights.</p>
+      <% end %>
     </div>
   </div>
 </div>

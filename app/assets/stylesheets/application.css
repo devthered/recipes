@@ -91,6 +91,10 @@ label {
 }
 
 @media (max-width: 761px) {
+  .container {
+    width: 100%;
+  }
+
   .card,
   .recipe {
     padding-left: 10px;
@@ -251,7 +255,7 @@ header nav {
   float: right;
   font-size: 1.5em;
   color: white;
-  padding-top: 0.25em;
+  padding-top: 0.2em;
 }
 
 header nav a,
@@ -259,7 +263,6 @@ header nav a:hover,
 header nav a:visited {
   color: inherit;
   text-decoration: none;
-  background-color: transparent;
   padding: 2px 5px;
 }
 

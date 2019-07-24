@@ -5,6 +5,7 @@ class User
   field :name, type: String
   field :email, type: String
   field :password_digest, type: String
+  field :admin, type: Boolean, default: false
 
   has_secure_password
 
@@ -16,5 +17,4 @@ class User
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
-
 end
