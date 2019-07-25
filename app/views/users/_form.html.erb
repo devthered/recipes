@@ -25,15 +25,15 @@
       <%= form.label 'Full Name:' %>
       <%= form.text_field :name, placeholder: 'Cauli Flower' %>
       <%= form.label 'Email:' %>
-      <%= form.email_field :email, placeholder: 'name@example.com' %>
+      <%= form.email_field :email, placeholder: 'cauli@soup.veg' %>
       <%= form.label 'Password:' %>
       <%= form.password_field :password, placeholder: 'make it a good one' %>
-      <% if current_user.admin? %>
+      <% if logged_in? and current_user.admin? %>
         <%= form.label 'Admin:' %>
         <%= form.check_box :admin, class: 'checkbox' %>
       <%end %>
       <div class="actions">
-        <%= form.submit %>
+        <%= form.submit 'Sign Up' %>
       </div>
     </div>
   </div>
