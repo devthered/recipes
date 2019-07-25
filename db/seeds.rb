@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Recipe.collection.find.delete_many
+User.collection.find.delete_many
+
+User.create(name: "Devin Reed", email: "reed.devin@gmail.com", password: "nevermore", activated: true, admin: true)
+User.first.recipes.create(title: "Buttered Toast", genre: "baked", ingredients: ["butter", "bread"], instructions: "Toast bread. Then apply butter. Eat.")
 
 #puts "adding recipes"
 #JSON.parse(File.read('db/recipes.json')).each do |doc|

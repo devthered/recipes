@@ -6,6 +6,7 @@ class User
   before_create :create_activation_digest
   before_save :downcase_email
 
+  has_many :recipes, dependent: :destroy
   field :name, type: String
   field :email, type: String
   field :admin, type: Boolean, default: false

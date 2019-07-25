@@ -2,26 +2,27 @@ class Recipe
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  belongs_to :user
   field :title, type: String
-  field :source, type: String
   field :genre, type: String
   field :ingredients, type: Array, default: []
   field :instructions, type: String
+  field :source, type: String
 
   default_scope { order(genre: :asc, title: :asc) }
 
-  validates_presence_of :title, :source, :genre, :ingredients, :instructions
+  validates_presence_of :title, :genre, :ingredients, :instructions
 
   def ingredients=(ingredients)
-    if ingredients.respond_to?('split')
-      self[:ingredients] = ingredients.split("\r\n").map { |ingredient| sanitize(ingredient) }
+    if ingredients.is_a? String
+      self[:ingredients] = ingredients.split("\r\n").map { |ingredient| ingredient }
     else
-      self[:ingredients] = ingredients.map { |ingredient| sanitize(ingredient) }
+      self[:ingredients] = ingredients.map { |ingredient| ingredient }
     end
   end
 
   def instructions=(instructions)
-    self[:instructions] = sanitize(instructions)
+    self[:instructions] = instructions
   end
 
   def print_ingredients
@@ -64,15 +65,4 @@ class Recipe
 
   # private methods live down here
   private
-  
-  def sanitize(input)
-    conversions = {
-      '1/2' => '½',
-      '1/4' => '¼',
-      '1/8' => '⅛',
-    }
-
-    conversions.each { |k, v| input = input.sub(k, v) }
-    return input;
-  end
 end

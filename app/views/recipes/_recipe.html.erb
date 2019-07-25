@@ -1,11 +1,13 @@
 <div class="recipe genre-<%= recipe.genre %>">
   <div class="recipe-header">
-    <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button' do %>
-      <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe', title: 'Edit Recipe' %>
+    <% if current_user == recipe.user %>
+      <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button' do %>
+        <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe', title: 'Edit Recipe' %>
+      <% end %>
     <% end %>
     <p class="recipe-title"><%= recipe.title %></p>
     <div class="spacer"></div>
-    <p class="recipe-author"><%= recipe.source %></p>
+    <%= link_to recipe.user.name, recipe.user, class: 'recipe-author' %>
   </div>
   <div class="recipe-body">
     <ul class="ingredients">
