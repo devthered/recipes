@@ -1,8 +1,10 @@
 <div class="container">
   <div class="card">
     <div class="card-header">
-      <%= link_to edit_user_path(@user), class: 'edit-button' do %>
-        <%= image_tag asset_path('edit.png'), alt: 'Edit Profile', title: 'Edit Profile' %>
+      <% if @user == current_user %>
+        <%= link_to edit_user_path(@user), class: 'edit-button' do %>
+          <%= image_tag asset_path('edit.png'), alt: 'Edit Profile', title: 'Edit Profile' %>
+        <% end %>
       <% end %>
       <p class="card-title"><%= @user.name %></p>
     </div>
@@ -16,4 +18,8 @@
       <% end %>
     </div>
   </div>
+</div>
+
+<div id="recipes" class="container">
+  <%= render partial: "recipes/recipe", collection: @user.recipes %>
 </div>
