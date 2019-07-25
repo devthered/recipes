@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :recipes
+  resources :account_activations, only: [:edit]
 
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'

@@ -201,13 +201,15 @@ input[type=checkbox] {
 .alert-danger,
 .alert-danger li,
 .alert-error,
-.alert-error li {
+.alert-error li,
+.alert-warning {
   background-color: #f9d9d8;
   border-color: #af7370;
   color: #af7370;
 }
 
 .alert-alert,
+.alert-info,
 .alert-notice {
   background-color: #d9eff9;
   border-color: #709aaf;

@@ -2,17 +2,19 @@ class User
   include Mongoid::Document
   include ActiveModel::SecurePassword
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
+  before_create :create_activation_digest
+  before_save :downcase_email
 
   field :name, type: String
   field :email, type: String
-  field :password_digest, type: String
-  field :remember_digest, type: String
   field :admin, type: Boolean, default: false
-
+  field :remember_digest, type: String
+  field :activation_digest, type: String
+  field :activated, type: Boolean, default: false
+  field :activated_at, type: DateTime
+  field :password_digest, type: String
   has_secure_password
-
-  before_save { self.email = email.downcase }
 
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -27,10 +29,11 @@ class User
     update_attribute(:remember_digest, User.digest(remember_token))
   end
 
-  # Returns true if the given token matches the digest.
-  def authenticated?(remember_token)
-    return false if remember_digest.nil?
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  # Returns true if the given token matches the digest for the specified attribute.
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(token)
   end
 
   # Deletes the internal remember digest to forget a user.
@@ -49,4 +52,15 @@ class User
   def self.new_token
     SecureRandom.urlsafe_base64
   end
+
+  private
+
+    def downcase_email
+      self.email = email.downcase
+    end
+
+    def create_activation_digest
+      self.activation_token = User.new_token
+      self.activation_digest = User.digest(activation_token)
+    end
 end
