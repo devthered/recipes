@@ -1,0 +1,16 @@
+<div class="container">
+  <%= form_with(scope: :password_reset, url: password_resets_path, method: :post, remote: true) do |form| %>
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">Reset Password</p>
+      </div>
+      <div class="card-body">
+        <%= form.label 'Email:' %>
+        <%= form.email_field :email, placeholder: 'name@example.com' %>
+        <div class="actions">
+          <%= form.submit 'Send Reset Link' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

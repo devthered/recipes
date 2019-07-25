@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_with(model: @user, url: password_reset_path(params[:id])) do |form| %>
+    <div class="card">
+      <div class="card-header">
+        <p class="card-title">Reset Password</p>
+      </div>
+      <div class="card-body">
+        <%= hidden_field_tag :email, @user.email %>
+        <%= form.label 'New Password:' %>
+        <%= form.password_field :password, placeholder: 'make it a good one' %>
+        <%= form.label 'Confirm Password:' %>
+        <%= form.password_field :password_confirmation %>
+        <div class="actions">
+          <%= form.submit 'Update Password' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
