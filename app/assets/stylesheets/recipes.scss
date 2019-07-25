@@ -162,29 +162,3 @@ input[type=submit].search-button {
   padding: 5px;
   height: 100%;
 }
-
-/*
- * Delete Recipe Button Styles
- */
-
-.delete-recipe-button {
-  position: absolute;
-  right: 15px;
-  z-index: 99;
-  height: 36px;
-  width: 36px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 2px solid white;
-  padding: 2px;
-}
-
-.delete-recipe-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.delete-recipe-button img {
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-}

@@ -48,6 +48,14 @@ label {
   margin-bottom: 5px;
 }
 
+a,
+a:hover,
+a:visited {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
 .clear {
   clear: both;
 }
@@ -71,36 +79,6 @@ label {
   width: 0;
   margin: 0;
   padding: 0;
-}
-
-/*
- * Form Styles
- */
-
-input {
-  border: none;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-input[type=submit] {
-  margin-bottom: 0;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-input[type=submit]:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-input[type=checkbox] {
-  display: inline;
-  height: 1em;
-  width: 1em;
-}
-
-.actions {
-  margin-top: 10px;
 }
 
 /*
@@ -188,6 +166,67 @@ input[type=checkbox] {
   border-style: solid;
   font-size: 1.0em;
   line-height: 1.2em;
+}
+
+.card-body p,
+.recipe-body p {
+  margin: 5px 0;
+}
+
+/*
+ * Form Styles
+ */
+
+input {
+  border: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type=submit] {
+  margin-bottom: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+input[type=checkbox] {
+  display: inline;
+  height: 1em;
+  width: 1em;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+/*
+ * Delete Button Styles
+ */
+
+.delete-button {
+  position: absolute;
+  right: 15px;
+  z-index: 99;
+  height: 36px;
+  width: 36px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 2px solid white;
+  padding: 2px;
+}
+
+.delete-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.delete-button img {
+  height: 100%;
+  width: 100%;
+  z-index: 99;
 }
 
 /*

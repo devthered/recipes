@@ -8,6 +8,9 @@
     <p class="recipe-title"><%= recipe.title %></p>
     <div class="spacer"></div>
     <%= link_to recipe.user.name, recipe.user, class: 'recipe-author' %>
+    <% if recipe.user.name != recipe.source %>
+      <p class="recipe-author"><%= recipe.source %></p>
+    <% end %>
   </div>
   <div class="recipe-body">
     <ul class="ingredients">
