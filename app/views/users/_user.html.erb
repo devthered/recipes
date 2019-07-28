@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <% if user == current_user or current_user.admin? %>
+      <%= link_to edit_user_path(user), class: 'edit-button' do %>
+        <%= image_tag asset_path('edit.png'), alt: 'Edit Profile', title: 'Edit Profile' %>
+      <% end %>
+    <% end %>
+    <p class="card-title"><%= user.name %></p>
+  </div>
+  <div class="card-body">
+    <p>
+      <strong>Email:</strong>
+      <%= user.email %>
+    </p>
+    <% if logged_in? and user.admin? %>
+      <p>This user has administrator rights.</p>
+    <% end %>
+  </div>
+</div>

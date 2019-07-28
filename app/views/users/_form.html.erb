@@ -13,7 +13,7 @@
   <div class="card">
     <div class="card-header">
       <!-- Show 'delete' button for user if exists and current user is admin -->
-      <% if not User.where(id: user.id).empty? and current_user.admin? %>
+      <% if not User.where(id: user.id).empty? and logged_in? and current_user.admin? %>
         <%= link_to @user, method: :delete, data: { confirm: 'Are you sure you want to delete this user?' }, class: 'delete-button' do %>
           <%= image_tag asset_path('delete.png'), alt: 'Delete Recipe', title: 'Delete Recipe' %>
         <% end %>
@@ -29,11 +29,13 @@
       <%= form.label 'Password:' %>
       <%= form.password_field :password, placeholder: 'make it a good one' %>
       <% if logged_in? and current_user.admin? %>
-        <%= form.label 'Admin:' %>
-        <%= form.check_box :admin, class: 'checkbox' %>
+        <%= form.label :admin do %>
+          <%= form.check_box :admin %>
+          <span>Make this user an admin</span>
+        <% end %>
       <%end %>
       <div class="actions">
-        <%= form.submit 'Sign Up' %>
+        <%= form.submit title %>
       </div>
     </div>
   </div>
