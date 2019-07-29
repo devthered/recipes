@@ -68,6 +68,9 @@ group :test do
 
   # Mongoid Matchers for RSpec
   gem 'mongoid-rspec'
+
+  # Makes testing prettier
+  gem 'shoulda'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

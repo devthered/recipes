@@ -18,6 +18,11 @@ require 'mongoid-rspec'
 RSpec.configure do |config|
   config.include Mongoid::Matchers
 
+  # Clean Mongoid collections prior to running each test.
+  config.before(:each) do
+    User.collection.find.delete_many
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
