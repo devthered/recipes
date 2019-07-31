@@ -17,7 +17,7 @@
 
       <!-- Show 'delete' button for recipe if exists -->
       <% if not Recipe.where(id: recipe.id).empty? %>
-        <%= link_to @recipe, method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' }, class: 'delete-recipe-button' do %>
+        <%= link_to @recipe, method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?' }, class: 'delete-button' do %>
           <%= image_tag asset_path('delete.png'), alt: 'Delete Recipe', title: 'Delete Recipe' %>
         <% end %>
       <% end %>

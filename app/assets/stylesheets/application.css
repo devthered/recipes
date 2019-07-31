@@ -67,18 +67,23 @@ a:visited {
   text-align: left;
 }
 
-.header-spacer {
-  height: 80px;
-  width: 0;
-  margin: 0;
-  padding: 0;
-}
-
 .spacer {
   height: 20px;
   width: 0;
   margin: 0;
   padding: 0;
+}
+
+.sticky-spacer {
+  clear: both;
+  height: 62px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 }
 
 /*
@@ -93,6 +98,13 @@ a:visited {
   margin-bottom: 30px;
 }
 
+.row {
+  position: relative;
+  left: 50%;
+  width: 761px;
+  padding: 0 20px;
+}
+
 @media (max-width: 761px) {
   .container {
     width: 100%;
@@ -104,11 +116,15 @@ a:visited {
     padding-right: 10px;
     width: 100%;
   }
+
+  .row {
+    width: 100%;
+  }
 }
 
 .card-header,
 .recipe-header {
-  background-color: #1eb5d5;
+  background-color: #117e94;
   color: white;
   padding: 10px 15px;
   border-top-right-radius: 10px;
@@ -170,7 +186,7 @@ a:visited {
 
 .card-body p,
 .recipe-body p {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 /*
@@ -275,40 +291,83 @@ input[type=checkbox] {
  */
 
 header {
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 100;
-  background-color: #1eb5d5;
-  padding: 8px 0;
-  box-shadow: 0 0 5px 0 black;
+  background-color: #0e5766;
+  padding: 4px 0;
+  box-shadow: 0 5px 5px -5px black;
 }
 
-.header-container {
+header .logo {
+  float: left;
+  font-size: 1.5em;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  margin: 0;
+}
+
+header nav {
+  position: relative;
   float: right;
-  position: relative;
-  left: -50%;
+  color: white;
+  font-size: 1.3em;
+  padding-top: 2px;
 }
 
-.header-row {
-  position: relative;
-  left: 50%;
-  width: 761px;
-  padding: 0 20px;
+header nav a,
+header nav a:hover,
+header nav a:visited {
+  // background-color: rgba(0, 0, 0, 0.3);
+  background-color: #117e94;
+  color: inherit;
+  text-decoration: none;
+  padding: 2px 5px;
+  margin: 5px 2px;
+  border-radius: 5px;
+  //border: 1px solid white;
 }
 
-@media (max-width: 761px) {
-  .header-container {
-    width: 100%;
-  }
-
-  .header-container .header-row {
-    width: 100%;
-  }
+header nav a:hover {
+  background-color: #1eb5d5;
 }
 
-header h1 {
-  font-size: 2.1em;
+/*
+ * Nav Button Styles
+ */
+
+.nav-button {
+  float: right;
+  height: 28px;
+  width: 28px;
+  margin-left: 10px;
+  padding: 2px;
+  border-radius: 2px;
+  border: 2px solid white;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-button img {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+ * Search Bar Styles
+ */
+
+#search-bar {
+  clear: both;
+  width: 100%;
+  padding: 6px 0;
+  background-color: #117e94;
+  box-shadow: 0 5px 5px -5px black;
+}
+
+.search-title {
+  font-size: 1.5em;
   color: white;
   text-align: left;
   font-weight: bold;
@@ -316,24 +375,41 @@ header h1 {
   margin: 0;
 }
 
-header nav {
-  position: relative;
+.search-form {
   float: right;
+}
+
+.genre-filter {
+  float: left;
+  width: 160px;
+  margin-right: 10px;
+  bottom: 0;
+}
+
+.recipe-search {
+  float: left;
+  border-bottom: 2px solid white;
+}
+
+input.search-box {
+  float: left;
   font-size: 1.5em;
+  height: 28px;
+  width: 250px;
+  background-color: inherit;
   color: white;
-  padding-top: 0.2em;
+  padding: 4px 8px;
+  margin: 0;
 }
 
-header nav a,
-header nav a:hover,
-header nav a:visited {
-  color: inherit;
-  text-decoration: none;
-  padding: 2px 5px;
-}
-
-header nav a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+input[type=submit].search-button {
+  float: left;
+  background-color: transparent;
+  background-image: url('/assets/search.png');
+  background-size: contain;
+  height: 28px;
+  width: 28px;
+  padding: 0;
 }
 
 
@@ -343,20 +419,20 @@ header nav a:hover {
 
  footer {
   clear: both;
-  height: 48px;
   width: 100%;
-  padding: 8px 0;
+  padding: 4px 0;
   box-shadow: 0 -5px 5px -5px black;
-  background-color: #1eb5d5;
+  background-color: #0e5766;
   color: white;
 }
 
-footer h3 {
-  width: 100%;
+footer .logo {
+  float: right;
+  font-size: 1.5em;
+  color: white;
   text-align: right;
-  padding: 0;
+  font-weight: bold;
   margin: 0;
-  font-size: 1.7em;
 }
 
 footer a,
@@ -391,6 +467,8 @@ textarea.pretty-textarea {
   position: relative;
   font-family: Arial;
   font-size: 1.5em;
+  border-bottom: 2px solid white;
+  background-color: inherit;
 }
 
 .pretty-dropdown select {
@@ -398,11 +476,10 @@ textarea.pretty-textarea {
 }
 
 .select-selected {
-  background-color: #1eb5d5;
-  padding: 0;
-  height: 38px;
+  background-color: #117e94;
+  padding: 0 8px;
+  height: 28px;
   border: none;
-  border-bottom: 2px solid white;
 }
 
 .select-selected:hover {
@@ -413,7 +490,7 @@ textarea.pretty-textarea {
 .select-selected:after {
   position: absolute;
   content: "";
-  top: 0.75em;
+  top: 0.5em;
   right: 10px;
   width: 0;
   height: 0;
@@ -424,25 +501,24 @@ textarea.pretty-textarea {
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #fff transparent;
-  top: 0.25em;
+  top: 0em;
 }
 
 /* style the items (options), including the selected item: */
 .select-items div, .select-selected {
   color: #ffffff;
-  padding: 4px 8px;
+  padding: 0 8px;
   cursor: pointer;
 }
 
 .select-items div, .select-selected.select-arrow-active {
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: #1eb5d5;
+  background-color: #117e94;
   top: 100%;
   left: 0;
   right: 0;
