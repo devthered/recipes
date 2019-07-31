@@ -16,13 +16,9 @@
           <p class="logo"><%= link_to 'Recipe Cards', root_url %></p>
           <% if logged_in? %>
             <nav>
-              <%= link_to 'New Recipe', new_recipe_path %>
               <%= link_to 'Recipes', recipes_path %>
               <%= link_to 'Users', users_path %>
               <%= link_to 'Log Out', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
-              <!-- <%= link_to new_recipe_path, class: 'nav-button' do %>
-                <%= image_tag asset_path('add.png'), alt: 'New Recipe', title: 'New Recipe' %>
-              <% end %> -->
             </nav>
           <% else %>
             <nav>
@@ -40,7 +36,9 @@
       <div id="search-bar">
         <div class="container">
           <div class="row">
-            <!-- <p class="search-title">Search Recipes</p> -->
+            <%= link_to new_recipe_path, class: 'nav-button' do %>
+                <%= image_tag asset_path('add.png'), alt: 'New Recipe', title: 'New Recipe' %>
+              <% end %>
             <%= form_with url: recipes_path, method: 'get', id: 'search_form', class: 'search-form' do |form| %>
               <div class="pretty-dropdown genre-filter">
                 <%= form.select :genre, Recipe.genres, { include_blank: 'all genres' } %>
