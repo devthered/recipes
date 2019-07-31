@@ -32,6 +32,10 @@ body {
   background-repeat: repeat;
 }
 
+button {
+  background-color: inherit;
+}
+
 input, textarea, p, li {
   font-family: "Arial", Arial, sans-serif;
   font-size: 16px;
@@ -75,6 +79,14 @@ a:visited {
   text-align: left;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .spacer {
   height: 20px;
   width: 0;
@@ -91,7 +103,7 @@ a:visited {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 98;
 }
 
 /*
@@ -102,17 +114,23 @@ a:visited {
 .recipe {
   position: relative;
   left: 50%;
-  width: 721px;
+  width: 992px;
+  padding: 0 10px;
   margin-bottom: 30px;
 }
 
 .row {
+  padding: 0 10px;
   position: relative;
   left: 50%;
-  width: 721px;
+  width: 992px;
 }
 
-@media (max-width: 761px) {
+.visible-xxs {
+  display: none;
+}
+
+@media (max-width: 992px) {
   .container {
     width: 100%;
   }
@@ -126,6 +144,16 @@ a:visited {
   .row {
     padding: 0 10px;
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hidden-xxs {
+    display: none;
+  }
+
+  .visible-xxs {
+    display: block;
   }
 }
 
@@ -342,16 +370,17 @@ header nav a:hover {
  */
 
 .nav-button {
-  float: left;
-  height: 30px;
-  width: 30px;
+  height: 28px;
+  width: 28px;
   padding: 2px;
+  margin-right: 8px;
   border-radius: 5px;
-  border: 2px solid white;
+  border: none;
+  background-color: #117e94;
 }
 
 .nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #1eb5d5;
 }
 
 .nav-button img {
@@ -380,19 +409,15 @@ header nav a:hover {
   margin: 0;
 }
 
-.search-form {
-  float: right;
-}
-
 .genre-filter {
   float: left;
-  width: 160px;
+  width: 150px;
   margin-right: 10px;
   bottom: 0;
 }
 
 .recipe-search {
-  float: left;
+  float: right;
   border-bottom: 2px solid white;
 }
 
@@ -400,15 +425,16 @@ input.search-box {
   float: left;
   font-size: 1.5em;
   height: 28px;
-  width: 230px;
+  width: calc(100% - 28px);
   background-color: inherit;
   color: white;
-  padding: 4px 8px;
+  padding: 4px;
   margin: 0;
 }
 
 input[type=submit].search-button {
-  float: left;
+  position: absolute;
+  right: 8px;
   background-color: transparent;
   background-image: url('/assets/search.png');
   background-size: 32px 32px;
@@ -416,6 +442,12 @@ input[type=submit].search-button {
   height: 28px;
   width: 28px;
   padding: 0;
+}
+
+@media (max-width: 576px) {
+  .recipe-search {
+    width: calc(100% - 160px);
+  }
 }
 
 
@@ -447,6 +479,60 @@ footer a:visited {
   color: white;
   background-color: transparent;
   text-decoration: none;
+}
+
+/*
+ * Menu Dropdown Styles
+ */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #0e5766;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*
+ * Nav Dropdown Content
+ */
+
+.nav-button.dropdown {
+  margin-right: 0;
+}
+
+.nav-button.dropdown:hover {
+  background-color: initial;
+}
+
+header .dropdown-content {
+  top: 100%;
+  right: 0;
+  width: 100px;
+  padding: 0;
+  background-color: #0e5766;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+header .dropdown-content a {
+  display: block;
+  font-size: 2.0em;
+  color: white;
+  padding: 8px 8px;
+}
+
+header .dropdown-content a:hover {
+  background-color: #1eb5d5;
 }
 
 /*
