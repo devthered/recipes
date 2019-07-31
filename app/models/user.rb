@@ -6,6 +6,8 @@ class User
   before_create :create_activation_digest
   before_save :downcase_email
 
+  default_scope { order(name: :asc, title: :asc) }
+
   has_many :recipes, dependent: :destroy
   field :name, type: String
   field :email, type: String

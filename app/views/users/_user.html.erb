@@ -5,14 +5,14 @@
         <%= image_tag asset_path('edit.png'), alt: 'Edit Profile', title: 'Edit Profile' %>
       <% end %>
     <% end %>
-    <p class="card-title"><%= user.name %></p>
+    <%= link_to user.name, user, class: 'card-title' %>
   </div>
   <div class="card-body">
     <p>
       <strong>Email:</strong>
       <%= user.email %>
     </p>
-    <% if logged_in? and user.admin? %>
+    <% if current_user.admin? and user.admin? %>
       <p>This user has administrator rights.</p>
     <% end %>
   </div>

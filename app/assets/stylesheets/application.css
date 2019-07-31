@@ -44,6 +44,12 @@ h1 {
   text-align: center;
 }
 
+.container h1 {
+  position: relative;
+  left: 50%;
+  width: 100%;
+}
+
 label {
   margin-bottom: 5px;
 }
