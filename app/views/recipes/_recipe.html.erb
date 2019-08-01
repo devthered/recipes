@@ -1,4 +1,4 @@
-<div class="recipe genre-<%= recipe.genre %>">
+<div class="recipe <%= recipe.genre_class %>">
   <div class="recipe-header">
     <% if current_user == recipe.user %>
       <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button' do %>

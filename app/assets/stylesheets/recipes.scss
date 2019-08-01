@@ -36,16 +36,52 @@
  * Recipe Genre-Specific Styles
  */
 
-.genre-baked .recipe-header,
-.genre-baked .select-items,
-.genre-baked .select-selected {
-  background-color: #82793e;
+.genre-breakfast .recipe-header,
+.genre-breakfast .select-items,
+.genre-breakfast .select-selected {
+  background-color: #7f6000;
+}
+
+.genre-bread .recipe-header,
+.genre-bread .select-items,
+.genre-bread .select-selected {
+  background-color: #7f6000;
+}
+
+.genre-grain .recipe-header,
+.genre-grain .select-items,
+.genre-grain .select-selected {
+  background-color: #7f6000;
+}
+
+.genre-noodle .recipe-header,
+.genre-noodle .select-items,
+.genre-noodle .select-selected {
+  background-color: #7f6000;
+}
+
+.genre-raw-veg .recipe-header,
+.genre-raw-veg .select-items,
+.genre-raw-veg .select-selected {
+  background-color: #38761d;
+}
+
+.genre-cooked-veg .recipe-header,
+.genre-cooked-veg .select-items,
+.genre-cooked-veg .select-selected {
+  background-color: #38761d;
 }
 
 .genre-meat .recipe-header,
 .genre-meat .select-items,
 .genre-meat .select-selected {
-  background-color: #8C1A11;
+  background-color: #990000;
+}
+
+.genre-seafood .recipe-header,
+.genre-seafood .select-items,
+.genre-seafood .select-selected {
+  background-color: #1c4587;
 }
 
 .genre-sauce .recipe-header,
@@ -54,16 +90,10 @@
   background-color: #6B2246;
 }
 
-.genre-seafood .recipe-header,
-.genre-seafood .select-items,
-.genre-seafood .select-selected {
-  background-color: #264483;
-}
-
-.genre-veggie .recipe-header,
-.genre-veggie .select-items,
-.genre-veggie .select-selected {
-  background-color: #47742C;
+.genre-sweet .recipe-header,
+.genre-sweet .select-items,
+.genre-sweet .select-selected {
+  background-color: #351c75;
 }
 
 /*
@@ -74,7 +104,7 @@
   position: absolute;
   bottom: 10px;
   right: 15px;
-  width: 160px;
+  width: 165px;
 }
 
 .recipe-body .ingredients-edit {

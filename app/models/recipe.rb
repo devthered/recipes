@@ -2,9 +2,22 @@ class Recipe
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  @genres = [
+    'breakfast',
+    'bread',
+    'grain',
+    'noodle',
+    'raw veg',
+    'cooked veg',
+    'meat',
+    'seafood',
+    'sauce',
+    'sweet'
+  ]
+
   belongs_to :user
   field :title, type: String
-  field :genre, type: String
+  field :genre, type: String, default: 'breakfast'
   field :ingredients, type: Array, default: []
   field :instructions, type: String
   field :source, type: String
@@ -12,6 +25,7 @@ class Recipe
   default_scope { order(genre: :asc, title: :asc) }
 
   validates_presence_of :title, :genre, :ingredients, :instructions
+  validates :genre, inclusion: { in: @genres }
 
   def ingredients=(ingredients)
     if ingredients.is_a? String
@@ -34,15 +48,13 @@ class Recipe
     return text.chomp
   end
 
+  def genre_class
+    return 'genre-' + self[:genre].sub(' ', '-')
+  end
+
   # class methods
   def self.genres
-    return [
-      'baked',
-      'meat',
-      'sauce',
-      'seafood',
-      'veggie'
-    ]
+    return @genres
   end
 
   def self.search(params)

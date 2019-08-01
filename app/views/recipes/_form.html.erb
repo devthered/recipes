@@ -12,7 +12,7 @@
   <% end %>
 
   <!-- Recipe Edit Form -->
-  <div class="recipe genre-<%= recipe.genre %>">
+  <div class="recipe <%= recipe.genre_class %>">
     <div class="recipe-header">
 
       <!-- Show 'delete' button for recipe if exists -->
@@ -28,7 +28,7 @@
         <%= form.select :genre, Recipe.genres %>
       </div>
       <div class="spacer"></div>
-      <%= form.text_field :source, class: 'recipe-author', placeholder: 'source' %>
+      <%= form.text_field :source, class: 'recipe-author', placeholder: 'source, if other than you' %>
     </div>
 
     <!-- Edit recipe ingredients and istructions -->
