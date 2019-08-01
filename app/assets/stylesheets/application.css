@@ -254,6 +254,7 @@ input[type=submit] {
   margin-bottom: 0;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 input[type=submit]:hover {
@@ -264,6 +265,13 @@ input[type=checkbox] {
   display: inline;
   height: 1em;
   width: 1em;
+}
+
+.card-body input[type=text],
+.card-body input[type=email],
+.card-body input[type=password] {
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 .actions {
