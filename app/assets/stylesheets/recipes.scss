@@ -39,13 +39,13 @@
 .genre-breakfast .recipe-header,
 .genre-breakfast .select-items,
 .genre-breakfast .select-selected {
-  background-color: #7f6000;
+  background-color: #c88327;
 }
 
-.genre-breads .recipe-header,
-.genre-breads .select-items,
+.genre-bread .recipe-header,
+.genre-bread .select-items,
 .genre-bread .select-selected {
-  background-color: #7f6000;
+  background-color: #b0873f;
 }
 
 .genre-grains .recipe-header,
@@ -57,7 +57,7 @@
 .genre-noodles .recipe-header,
 .genre-noodles .select-items,
 .genre-noodles .select-selected {
-  background-color: #7f6000;
+  background-color: #ccaf34;
 }
 
 .genre-raw-veg .recipe-header,
@@ -69,13 +69,13 @@
 .genre-cooked-veg .recipe-header,
 .genre-cooked-veg .select-items,
 .genre-cooked-veg .select-selected {
-  background-color: #38761d;
+  background-color: #1f420f;
 }
 
 .genre-meat .recipe-header,
 .genre-meat .select-items,
 .genre-meat .select-selected {
-  background-color: #990000;
+  background-color: #840000;
 }
 
 .genre-seafood .recipe-header,
@@ -96,14 +96,33 @@
   background-color: #351c75;
 }
 
+.genre-icon {
+  float: right;
+  width: 48px;
+  height: 48px;
+}
+
 /*
  * Recipe Edit Styles
  */
 
-.recipe-header .genre-selector {
+.recipe-edit-button {
   position: absolute;
   bottom: 10px;
   right: 15px;
+}
+
+.recipe-edit-button:hover {
+  background-color: initial;
+}
+
+.recipe-edit-button img {
+  width: 32px;
+  height: 32px;
+}
+
+.genre-selector {
+  float: right;
   width: 165px;
 }
 
@@ -128,3 +147,4 @@
   padding: 5px;
   height: 100%;
 }
+

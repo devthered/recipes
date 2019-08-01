@@ -4,7 +4,7 @@ class Recipe
 
   @genres = [
     'breakfast',
-    'breads',
+    'bread',
     'grains',
     'noodles',
     'raw veg',

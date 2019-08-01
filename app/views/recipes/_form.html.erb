@@ -24,10 +24,10 @@
 
       <!-- Edit recipe title, author, and genre -->
       <%= form.text_field :title, class: 'recipe-title', placeholder: 'title' %>
+      <div class="spacer"></div>
       <div class="pretty-dropdown genre-selector">
         <%= form.select :genre, Recipe.genres %>
       </div>
-      <div class="spacer"></div>
       <%= form.text_field :source, class: 'recipe-author', placeholder: 'source, if other than you' %>
     </div>
 

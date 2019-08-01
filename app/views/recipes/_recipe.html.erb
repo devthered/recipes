@@ -1,15 +1,16 @@
 <div class="recipe <%= recipe.genre_class %>">
   <div class="recipe-header">
-    <% if current_user == recipe.user %>
-      <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button' do %>
-        <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe', title: 'Edit Recipe' %>
-      <% end %>
-    <% end %>
-    <p class="recipe-title"><%= recipe.title %></p>
+    <%= image_tag asset_path("genres/#{recipe.genre}.png"), alt: recipe.genre, title: recipe.genre, class: 'genre-icon' %>
+    <%= link_to recipe.title, recipe, class: 'recipe-title white-link' %>
     <div class="spacer"></div>
     <%= link_to recipe.user.name, recipe.user, class: 'recipe-author white-link' %>
     <% if recipe.user.name != recipe.source %>
       <p class="recipe-author"><%= recipe.source %></p>
+    <% end %>
+    <% if current_user == recipe.user %>
+      <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button white-link' do %>
+        <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe', title: 'Edit Recipe' %>
+      <% end %>
     <% end %>
   </div>
   <div class="recipe-body">
