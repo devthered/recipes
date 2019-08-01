@@ -419,6 +419,7 @@ header nav a:hover {
 .recipe-search {
   float: right;
   border-bottom: 2px solid white;
+  width: 340px;
 }
 
 input.search-box {
