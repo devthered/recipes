@@ -9,21 +9,23 @@
     <% end %>
   </div>
   <div class="recipe-body">
-    <% if !recipe.servings.nil? %>
-      <i>Serves <%= recipe.servings %>.</i>
-      <div class="small-spacer"></div>
-    <% end %>
-    <% if (!recipe.time_hours.nil? and recipe.time_hours > 0) or (!recipe.time_minutes.nil? and recipe.time_minutes > 0) %>
-      <i>Takes about <%= distance_of_time_in_words(60 * recipe.time_minutes + 3600 * recipe.time_hours)  %>.</i>
-      <div class="small-spacer"></div>
-    <% end %>
-
-    <ul class="ingredients">
-      <% recipe.ingredients.each do |ingredient| %>
-        <li><%= ingredient %></li>
+    <div class="left-side">
+      <% if !recipe.servings.nil? %>
+        <p><i>Serves <%= recipe.servings %>.</i></p>
       <% end %>
-    </ul>
-    <%= simple_format(recipe.instructions) %>
+      <% if (!recipe.time_hours.nil? and recipe.time_hours > 0) or (!recipe.time_minutes.nil? and recipe.time_minutes > 0) %>
+        <p><i>Takes about <%= distance_of_time_in_words(60 * recipe.time_minutes + 3600 * recipe.time_hours)  %>.</i></p>
+      <% end %>
+      <ul class="ingredients">
+        <% recipe.ingredients.each do |ingredient| %>
+          <li><%= ingredient %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="right-side">
+      <%= simple_format(recipe.instructions) %>
+    </div>
+    <div class="clear"></div>
     <% if current_user == recipe.user %>
       <%= link_to 'Edit Recipe', edit_recipe_path(recipe), class: 'blue-link', title: 'Edit Recipe' %>
     <% end %>
