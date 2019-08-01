@@ -68,6 +68,13 @@ a:visited {
   text-decoration: none;
 }
 
+.blue-link,
+.blue-link:hover,
+.blue-link:visited {
+  color: blue;
+  background-color: transparent;
+}
+
 .clear {
   clear: both;
 }
