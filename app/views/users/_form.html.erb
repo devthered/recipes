@@ -32,7 +32,10 @@
           <%= form.check_box :admin %>
           <span>Make this user an admin</span>
         <% end %>
-      <%end %>
+      <% end %>
+      <% if !logged_in? %>
+        <%= link_to 'Already have an account?', login_url, class: 'blue-link', title: 'Log In' %>
+      <% end %>
       <div class="actions">
         <%= form.submit title %>
       </div>
