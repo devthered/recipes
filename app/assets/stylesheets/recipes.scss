@@ -106,23 +106,10 @@
  * Recipe Edit Styles
  */
 
-.recipe-edit-button {
+div.genre-selector {
   position: absolute;
   bottom: 10px;
-  right: 15px;
-}
-
-.recipe-edit-button:hover {
-  background-color: initial;
-}
-
-.recipe-edit-button img {
-  width: 32px;
-  height: 32px;
-}
-
-.genre-selector {
-  float: right;
+  right: 10px;
   width: 165px;
 }
 

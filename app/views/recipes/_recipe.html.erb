@@ -7,11 +7,7 @@
     <% if recipe.user.name != recipe.source %>
       <p class="recipe-author"><%= recipe.source %></p>
     <% end %>
-    <% if current_user == recipe.user %>
-      <%= link_to edit_recipe_path(recipe), class: 'recipe-edit-button white-link' do %>
-        <%= image_tag asset_path('edit.png'), alt: 'Edit Recipe', title: 'Edit Recipe' %>
-      <% end %>
-    <% end %>
+    
   </div>
   <div class="recipe-body">
     <ul class="ingredients">
@@ -20,5 +16,8 @@
       <% end %>
     </ul>
     <%= simple_format(recipe.instructions) %>
+    <% if current_user == recipe.user %>
+      <%= link_to 'Edit Recipe', edit_recipe_path(recipe), class: 'blue-link', title: 'Edit Recipe' %>
+    <% end %>
   </div>
 </div>
