@@ -2,7 +2,7 @@
   {
     "title": "Pizza Dough",
     "source": "Kush Patel",
-    "genre": "bread",
+    "genre": "breads",
     "ingredients": [
       "3.5 cups flour",
       "1.5 cups lukewarm water ",
@@ -15,7 +15,7 @@
   {
     "title": "Pasta Aglio e Olio",
     "source": "Binging with Babish",
-    "genre": "noodle",
+    "genre": "noodles",
     "ingredients": [
       "½ head garlic, separated and peeled ",
       "1 bunch parsley, rinsed ",
@@ -107,7 +107,7 @@
   {
     "title": "Cranberry Sauce",
     "source": "Joy of Cooking",
-    "genre": "sauce",
+    "genre": "sauces",
     "ingredients": [
       "1 lb cranberries",
       "1¼ cups sugar",
@@ -136,7 +136,7 @@
   {
     "title": "Lava Cakes of Love",
     "source": "Matty Matheson",
-    "genre": "sweet",
+    "genre": "sweets",
     "ingredients": [
       "115g (¼ lb) butter",
       "115g (4 oz) semisweet baking chocolate",

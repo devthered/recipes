@@ -4,15 +4,15 @@ class Recipe
 
   @genres = [
     'breakfast',
-    'bread',
-    'grain',
-    'noodle',
+    'breads',
+    'grains',
+    'noodles',
     'raw veg',
     'cooked veg',
     'meat',
     'seafood',
-    'sauce',
-    'sweet'
+    'sauces',
+    'sweets'
   ]
 
   belongs_to :user
