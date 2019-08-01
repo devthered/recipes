@@ -8,7 +8,7 @@
     <%= link_to user.name, user, class: 'card-title' %>
   </div>
   <div class="card-body">
-    <p><%= user.email %></p>
+    <%= mail_to user.email, user.email, class: 'blue-link' %>
     <p>This user has <%= pluralize(user.recipes.count, 'recipe') %>. <%= link_to 'View', user, class: 'blue-link' %></p> 
     <% if current_user.admin? and user.admin? %>
       <p>This user has administrator rights.</p>

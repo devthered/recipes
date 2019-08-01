@@ -33,6 +33,10 @@
 
     <!-- Edit recipe ingredients and istructions -->
     <div class="recipe-body">
+      Serves <%= form.select :servings, [*1..20] %>
+      <div class="small-spacer"></div>
+      Total Time: <%= form.select :time_hours, [*0..10] %> hours, <%= form.select :time_minutes, (0..55).step(5).to_a %> minutes
+      <div class="small-spacer"></div>
       <%= form.text_area :ingredients, class: 'pretty-textarea ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
       <div class="spacer"></div>
       <%= form.text_area :instructions, class: 'pretty-textarea instructions-edit', placeholder: 'instructions', id: 'instructions' %>

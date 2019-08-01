@@ -21,6 +21,9 @@ class Recipe
   field :ingredients, type: Array, default: []
   field :instructions, type: String
   field :source, type: String
+  field :servings, type: Integer
+  field :time_hours, type: Integer
+  field :time_minutes, type: Integer
 
   default_scope { order(title: :asc) }
 

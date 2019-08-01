@@ -7,9 +7,17 @@
     <% if recipe.user.name != recipe.source %>
       <p class="recipe-author"><%= recipe.source %></p>
     <% end %>
-    
   </div>
   <div class="recipe-body">
+    <% if !recipe.servings.nil? %>
+      <i>Serves <%= recipe.servings %>.</i>
+      <div class="small-spacer"></div>
+    <% end %>
+    <% if (!recipe.time_hours.nil? and recipe.time_hours > 0) or (!recipe.time_minutes.nil? and recipe.time_minutes > 0) %>
+      <i>Takes about <%= distance_of_time_in_words(60 * recipe.time_minutes + 3600 * recipe.time_hours)  %>.</i>
+      <div class="small-spacer"></div>
+    <% end %>
+
     <ul class="ingredients">
       <% recipe.ingredients.each do |ingredient| %>
         <li><%= ingredient %></li>
