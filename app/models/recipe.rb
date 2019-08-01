@@ -22,7 +22,7 @@ class Recipe
   field :instructions, type: String
   field :source, type: String
 
-  default_scope { order(genre: :asc, title: :asc) }
+  default_scope { order(title: :asc) }
 
   validates_presence_of :title, :genre, :ingredients, :instructions
   validates :genre, inclusion: { in: @genres }
@@ -53,6 +53,10 @@ class Recipe
   end
 
   # class methods
+  def self.sorted
+    Recipe.all.sort_by { |recipe| Recipe.genres.find_index(recipe.genre) }
+  end
+
   def self.genres
     return @genres
   end
@@ -64,7 +68,7 @@ class Recipe
       {source: search_term_regex},
       {ingredients: search_term_regex},
       {instructions: search_term_regex}
-    )
+    ).sorted
   end
 
   def self.filter_by_genre(genre)
