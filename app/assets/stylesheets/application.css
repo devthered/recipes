@@ -50,6 +50,10 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
 .container h1 {
   position: relative;
   left: 50%;
@@ -73,6 +77,10 @@ a:visited {
 .blue-link:visited {
   color: blue;
   background-color: transparent;
+}
+
+.white-link:hover {
+  text-decoration: underline;
 }
 
 .clear {
