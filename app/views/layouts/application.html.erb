@@ -19,7 +19,7 @@
               <%= image_tag asset_path('sandwich.png'), alt: 'Menu', title: 'Menu' %>
               <div class="dropdown-content">
                 <%= link_to 'Recipes', recipes_path %>
-                <%= link_to 'Users', users_path %>
+                <%= link_to 'Cooks', users_path %>
                 <%= link_to 'Me', current_user %>
                 <%= link_to 'Log Out', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
               </div>
@@ -27,7 +27,7 @@
             
             <nav class="hidden-xxs">
               <%= link_to 'Recipes', recipes_path %>
-              <%= link_to 'Users', users_path %>
+              <%= link_to 'Cooks', users_path %>
               <%= link_to 'Me', current_user %>
               <%= link_to 'Log Out', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
             </nav>
