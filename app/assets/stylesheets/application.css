@@ -312,11 +312,11 @@ input[type=checkbox] {
  */
 
 .alert {
-  border-radius: 5px;
+  margin-top: 10px;
   padding: 10px;
   text-align: left;
   border: 1px solid;
-  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .alert-danger,
@@ -345,8 +345,10 @@ input[type=checkbox] {
 
 .field_with_errors {
   display: block;
+  background-color: transparent;
+  border: solid red 2px;
+  padding: 2px;
 }
-
 
 /*
  * Header Styles
