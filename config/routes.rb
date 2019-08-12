@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   # post '/reset_password', to: 'password_resets#update'
 
   resources :users
-  resources :recipes
+  resources :recipes do
+    post :toggle_liked, on: :member
+  end
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
 

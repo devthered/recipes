@@ -16,6 +16,8 @@ class Recipe
   ]
 
   belongs_to :owner, class_name: 'User', inverse_of: :recipes
+  has_and_belongs_to_many :likers, class_name: 'User', inverse_of: :liked_recipes
+  
   field :title, type: String
   field :genre, type: String, default: 'breakfast'
   field :ingredients, type: Array, default: []

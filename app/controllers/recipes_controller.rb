@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy, :toggle_liked]
   before_action :logged_in_user, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :owner, only: [:edit, :update, :destroy]
 
@@ -62,6 +62,17 @@ class RecipesController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_liked
+    if current_user.liked_recipes.include?(@recipe)
+      current_user.unlike(@recipe)
+    else
+      current_user.like(@recipe)
+    end
+    css_class = "like-icon #{liked_by_current_user?(recipe) ? 'heart-closed' : 'heart-open'}"
+    render js: "$('.like-icon').setAttribute('class', '#{css_class}');"
+    #render js:'console.log('hi')'
   end
 
   private

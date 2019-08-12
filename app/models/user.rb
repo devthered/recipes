@@ -9,6 +9,8 @@ class User
   default_scope { order(name: :asc, title: :asc) }
 
   has_many :recipes, class_name: 'Recipe', inverse_of: :owner, dependent: :destroy
+  has_and_belongs_to_many :liked_recipes, class_name: 'Recipe', inverse_of: :likers
+
   field :name, type: String
   field :email, type: String
   field :admin, type: Boolean, default: false
@@ -63,6 +65,14 @@ class User
 
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  def like(recipe)
+    self.liked_recipes.push(recipe)
+  end
+
+  def unlike(recipe)
+    self.liked_recipes.delete(recipe)
   end
 
   #
