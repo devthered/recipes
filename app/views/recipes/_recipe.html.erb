@@ -11,10 +11,10 @@
   </div>
   <div class="recipe-body">
     <div class="left-side">
-      <% if !recipe.servings.nil? %>
+      <% if recipe.servings > 0 %>
         <p><i>Serves <%= recipe.servings %>.</i></p>
       <% end %>
-      <% if (!recipe.time_hours.nil? and recipe.time_hours > 0) or (!recipe.time_minutes.nil? and recipe.time_minutes > 0) %>
+      <% if recipe.time_hours > 0 or recipe.time_minutes > 0 %>
         <p><i>Takes about <%= distance_of_time_in_words(60 * recipe.time_minutes + 3600 * recipe.time_hours)  %>.</i></p>
       <% end %>
       <ul class="ingredients">
