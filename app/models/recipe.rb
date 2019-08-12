@@ -15,7 +15,7 @@ class Recipe
     'sweets'
   ]
 
-  belongs_to :user
+  belongs_to :owner, class_name: 'User', inverse_of: :recipes
   field :title, type: String
   field :genre, type: String, default: 'breakfast'
   field :ingredients, type: Array, default: []
@@ -84,7 +84,7 @@ class Recipe
 
   def self.filter_by_user(user)
     if user
-      Recipe.where(user_id: user)
+      Recipe.where(owner_id: user)
     else
       Recipe.all
     end

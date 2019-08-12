@@ -3,8 +3,8 @@
     <%= image_tag asset_path("genres/#{recipe.genre}.png"), alt: recipe.genre, title: recipe.genre, class: 'genre-icon' %>
     <%= link_to recipe.title, recipe, class: 'recipe-title white-link' %>
     <div class="spacer"></div>
-    <%= link_to recipe.user.name, recipe.user, class: 'recipe-author white-link' %>
-    <% if recipe.user.name != recipe.source %>
+    <%= link_to recipe.owner.name, recipe.owner, class: 'recipe-author white-link' %>
+    <% if recipe.owner.name != recipe.source %>
       <p class="recipe-author"><%= recipe.source %></p>
     <% end %>
   </div>
@@ -26,7 +26,7 @@
       <%= simple_format(recipe.instructions) %>
     </div>
     <div class="clear"></div>
-    <% if current_user == recipe.user %>
+    <% if current_user == recipe.owner %>
       <%= link_to 'Edit Recipe', edit_recipe_path(recipe), class: 'blue-link', title: 'Edit Recipe' %>
     <% end %>
   </div>

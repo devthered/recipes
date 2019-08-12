@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :owner, only: [:edit, :update, :destroy]
 
   # GET /recipes
   # GET /recipes.json
@@ -65,8 +65,8 @@ class RecipesController < ApplicationController
   end
 
   private
-    def correct_user
-      unless current_user == @recipe.user
+    def owner
+      unless current_user == @recipe.owner
         flash[:danger] = "You do not have the ability to modify that recipe."
         redirect_to root_url
       end
@@ -79,6 +79,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:user_id, :title, :source, :ingredients, :instructions, :genre, :servings, :time_hours, :time_minutes)
+      params.require(:recipe).permit(:owner_id, :title, :source, :ingredients, :instructions, :genre, :servings, :time_hours, :time_minutes)
     end
 end

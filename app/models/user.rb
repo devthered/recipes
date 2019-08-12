@@ -8,7 +8,7 @@ class User
 
   default_scope { order(name: :asc, title: :asc) }
 
-  has_many :recipes, dependent: :destroy
+  has_many :recipes, class_name: 'Recipe', inverse_of: :owner, dependent: :destroy
   field :name, type: String
   field :email, type: String
   field :admin, type: Boolean, default: false

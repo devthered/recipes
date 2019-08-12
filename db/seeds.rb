@@ -22,7 +22,7 @@ JSON.parse(File.read('db/recipes.json')).each do |doc|
   elsif doc["source"] == "Chris Reed"
     user = chris
   end
-  Recipe.create(doc.merge(user: user))
+  Recipe.create(doc.merge(owner: user))
 end
 
 puts "done!"
