@@ -1,3 +1,4 @@
+// automatically update search terms when search fields are changed
 $(function() {
   var update_recipe_index = function() {
     $.get($("#search_form").attr("action"), $("#search_form").serialize(), null, "script");
@@ -10,11 +11,11 @@ $(function() {
   update_recipe_index();
 });
 
+
+// sticky search bar when scrolling
 var searchBar = document.getElementById("search-bar");
 var topSpacer = document.getElementById("top-spacer");
 var stickyHeight = searchBar.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 window.onscroll = function() {
   if (window.pageYOffset > stickyHeight) {
     searchBar.classList.add("sticky");
