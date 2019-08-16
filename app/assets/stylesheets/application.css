@@ -79,6 +79,7 @@ a:visited {
   background-color: transparent;
 }
 
+.blue-link:hover,
 .white-link:hover {
   text-decoration: underline;
 }
@@ -288,7 +289,7 @@ input[type=checkbox] {
 .delete-button {
   position: absolute;
   right: 15px;
-  z-index: 99;
+  z-index: 97;
   height: 36px;
   width: 36px;
   margin-top: 5px;
@@ -399,13 +400,13 @@ header nav a:hover {
 
 .nav-button {
   height: 28px;
-  padding: 2px 5px;
+  padding: 0;
   margin-right: 6px;
   border-radius: 5px;
   border: none;
   background-color: #117e94;
-  color: white;
   font-size: 1.3em;
+  color: white;
 }
 
 .nav-button:hover {
@@ -422,9 +423,10 @@ header nav a:hover {
   width: 100%;
 }
 
-.nav-button > a {
-  padding: 0 2px;
+.nav-button a {
+  padding: 2px 5px;
 }
+
 
 /*
  * Menu Dropdown Styles

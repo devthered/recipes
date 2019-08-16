@@ -67,6 +67,10 @@ class User
     reset_sent_at < 2.hours.ago
   end
 
+  def first_name
+    self.name.split(' ')[0]
+  end
+
   def initials
     initials = ''
     self.name.split(' ').map { |str| str[0] }.each { |i| initials += i }
