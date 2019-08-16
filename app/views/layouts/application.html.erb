@@ -15,30 +15,38 @@
         <div class="row">
           <p class="logo"><%= link_to 'Recipe Cards', root_url %></p>
           <% if logged_in? %>
-            <button class="nav-button right visible-xxs dropdown">
+            <button class="nav-button with-image right visible-xxs dropdown">
               <%= image_tag asset_path('sandwich.png'), alt: 'Menu', title: 'Menu' %>
               <div class="dropdown-content">
-                <%= link_to 'Recipes', recipes_path %>
+                <%= link_to 'Browse Recipes', recipes_path %>
                 <%= link_to 'Cooks', users_path %>
-                <%= link_to 'Me', current_user %>
+                <%= link_to 'Saved Recipes', saved_recipes_path %>
+                <%= link_to 'My Recipes', current_user %>
+                <%= link_to 'Edit Profile', edit_user_path(current_user) %>
                 <%= link_to 'Log Out', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
               </div>
             </button>
-            
+
+            <button class="nav-button right hidden-xxs dropdown">
+              <%= link_to current_user.initials, current_user, title: current_user.name %>
+              <div class="dropdown-content">
+                <%= link_to 'Saved Recipes', saved_recipes_path %>
+                <%= link_to 'My Recipes', current_user %>
+                <%= link_to 'Edit Profile', edit_user_path(current_user) %>
+                <%= link_to 'Log Out', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
+              </div>
+            </button>
+
             <nav class="hidden-xxs">
-              <%= link_to 'Recipes', recipes_path %>
-              <%= link_to 'Cooks', users_path %>
-              <%= link_to 'Me', current_user %>
-              <%= link_to 'Log Out', logout_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' } %>
+              <%= link_to 'Browse Recipes', recipes_path %><%= link_to 'Cooks', users_path %>
             </nav>
 
-            <%= link_to new_recipe_path, class: 'nav-button right' do %>
+            <%= link_to new_recipe_path, class: 'nav-button with-image right' do %>
               <%= image_tag asset_path('add.png'), alt: 'New Recipe', title: 'New Recipe' %>
             <% end %>
           <% else %>
             <nav>
-              <%= link_to 'Sign Up', signup_path %>
-              <%= link_to 'Log In', login_path %>
+              <%= link_to 'Sign Up', signup_path %><%= link_to 'Log In', login_path %>
             </nav>
           <% end %>
         </div>

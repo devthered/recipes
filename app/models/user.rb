@@ -67,6 +67,12 @@ class User
     reset_sent_at < 2.hours.ago
   end
 
+  def initials
+    initials = ''
+    self.name.split(' ').map { |str| str[0] }.each { |i| initials += i }
+    return initials
+  end
+
   def saved_recipe?(recipe)
     self.saved_recipes.include?(recipe)
   end
