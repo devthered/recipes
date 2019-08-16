@@ -70,9 +70,6 @@ class RecipesController < ApplicationController
     else
       current_user.like(@recipe)
     end
-    css_class = "like-icon #{liked_by_current_user?(recipe) ? 'heart-closed' : 'heart-open'}"
-    render js: "$('.like-icon').setAttribute('class', '#{css_class}');"
-    #render js:'console.log('hi')'
   end
 
   private
