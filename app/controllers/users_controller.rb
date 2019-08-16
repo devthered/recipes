@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :show, :edit, :update, :index, :destroy]
+  before_action :logged_in_user, only: [:index, :index_saved_recipes, :show, :edit, :update, :index, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :set_user, only: [:show]
   before_action :admin_user, only: [:destroy]
@@ -8,6 +8,13 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+  end
+
+  # GET /saved_recipes
+  # GET /saved_recipes.json
+  def index_saved_recipes
+    @recipe_saver = current_user
+    @recipes = current_user.saved_recipes.search(params)
   end
 
   # GET /users/1
@@ -82,7 +89,7 @@ class UsersController < ApplicationController
 
     # Confirms the correct user is logged in.
     def correct_user
-      @user = User.find(params[:id])
+      set_user
       redirect_to(root_url) unless current_user? @user or current_user.admin?
     end
 

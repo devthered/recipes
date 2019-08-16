@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'recipes#index'
+  get '/saved_recipes', to: 'users#index_saved_recipes'
 
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   resources :recipes do
     post :toggle_saved, on: :member
   end
+
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
 

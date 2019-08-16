@@ -68,27 +68,37 @@ class Recipe
 
   def self.search(params)
     search_term_regex = /.*#{params[:search]}.*/i
-    Recipe.filter_by_user(params[:user]).filter_by_genre(params[:genre]).or(
-      {title: search_term_regex},
-      {source: search_term_regex},
-      {ingredients: search_term_regex},
-      {instructions: search_term_regex}
-    ).sorted
+    Recipe.filter_by_saver(params[:saver])
+          .filter_by_user(params[:user])
+          .filter_by_genre(params[:genre]).or(
+            {title: search_term_regex},
+            {source: search_term_regex},
+            {ingredients: search_term_regex},
+            {instructions: search_term_regex})
+          .sorted
   end
 
   def self.filter_by_genre(genre)
     if genre != ""
-      Recipe.where(genre: genre)
+      self.where(genre: genre)
     else
-      Recipe.all
+      self.all
+    end
+  end
+
+  def self.filter_by_saver(saver)
+    if saver
+      self.where(saved_by_user_ids: saver)
+    else
+      self.all
     end
   end
 
   def self.filter_by_user(user)
     if user
-      Recipe.where(owner_id: user)
+      self.where(owner_id: user)
     else
-      Recipe.all
+      self.all
     end
   end
 
