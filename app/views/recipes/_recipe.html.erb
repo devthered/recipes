@@ -1,7 +1,7 @@
 <div class="recipe <%= recipe.genre_class %>">
   <div class="recipe-header">
     <%= image_tag asset_path("genres/#{recipe.genre}.png"), alt: recipe.genre, title: recipe.genre, class: 'genre-icon' %>
-    <%= button_to 'Like', toggle_liked_recipe_url(recipe), remote: true, class: "like-icon #{liked_by_current_user?(recipe) ? 'heart-closed' : 'heart-open'}"  %>
+    <%= button_to 'Save', toggle_liked_recipe_url(recipe), remote: true, class: "like-icon #{liked_by_current_user?(recipe) ? 'heart-closed' : 'heart-open'}", title: liked_by_current_user?(recipe) ? 'Saved' : 'Click to Save'  %>
     <%= link_to recipe.title, recipe, class: 'recipe-title white-link' %>
     <div class="spacer"></div>
     <%= link_to recipe.owner.name, recipe.owner, class: 'recipe-author white-link' %>
