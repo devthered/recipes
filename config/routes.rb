@@ -6,14 +6,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  # get '/send_reset_email', to: 'password_resets#new'
-  # post '/send_reset_email', to: 'password_resets#create'
-  # get '/reset_password(', to: 'password_resets#edit'
-  # post '/reset_password', to: 'password_resets#update'
-
   resources :users
   resources :recipes do
-    post :toggle_liked, on: :member
+    post :toggle_saved, on: :member
   end
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]

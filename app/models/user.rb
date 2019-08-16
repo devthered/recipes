@@ -9,7 +9,7 @@ class User
   default_scope { order(name: :asc, title: :asc) }
 
   has_many :recipes, class_name: 'Recipe', inverse_of: :owner, dependent: :destroy
-  has_and_belongs_to_many :liked_recipes, class_name: 'Recipe', inverse_of: :likers
+  has_and_belongs_to_many :saved_recipes, class_name: 'Recipe', inverse_of: :saved_by_users
 
   field :name, type: String
   field :email, type: String
@@ -67,12 +67,16 @@ class User
     reset_sent_at < 2.hours.ago
   end
 
-  def like(recipe)
-    self.liked_recipes.push(recipe)
+  def saved_recipe?(recipe)
+    self.saved_recipes.include?(recipe)
   end
 
-  def unlike(recipe)
-    self.liked_recipes.delete(recipe)
+  def save_recipe(recipe)
+    self.saved_recipes.push(recipe)
+  end
+
+  def unsave_recipe(recipe)
+    self.saved_recipes.delete(recipe)
   end
 
   #

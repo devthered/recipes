@@ -1,5 +1,5 @@
 module RecipesHelper
-  def liked_by_current_user?(recipe)
-    @current_user.liked_recipes.include?(recipe)
+  def saved_by_current_user?(recipe)
+    @current_user.saved_recipe?(recipe)
   end
 end

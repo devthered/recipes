@@ -1,0 +1,17 @@
+var recipe_headers = document.getElementsByClassName("recipe-header");
+for(var i = 0; i < recipe_headers.length; i++)
+{
+  var header = recipe_headers.item(i);
+
+  // if title link contains recipe id, we found the right recipe card
+  var title = header.getElementsByClassName("recipe-title")[0];
+  if (title.toString().indexOf("<%= escape_javascript(@recipe.id.to_s) %>") != -1)
+  {
+    // update css class and title for save button
+    var save_button = header.getElementsByClassName("save-button")[0];
+    var new_class = "save-button <%= escape_javascript(saved_by_current_user?(@recipe) ? 'heart-closed' : 'heart-open') %>";
+    var new_title = "<%= escape_javascript(saved_by_current_user?(@recipe) ? 'Saved' : 'Click to Save') %>";
+    save_button.setAttribute("class", new_class);
+    save_button.setAttribute("title", new_title);
+  }
+}

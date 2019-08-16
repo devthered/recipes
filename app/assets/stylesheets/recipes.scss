@@ -132,7 +132,7 @@
   height: 40px;
 }
 
-input[type="submit"].like-icon {
+input[type="submit"].save-button {
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -145,7 +145,7 @@ input[type="submit"].like-icon {
   background-size: contain;
 }
 
-input[type="submit"].like-icon:hover {
+input[type="submit"].save-button:hover {
   background-color: initial;
 }
 

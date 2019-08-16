@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :edit, :update, :destroy, :toggle_liked]
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy, :toggle_saved]
   before_action :logged_in_user, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :owner, only: [:edit, :update, :destroy]
 
@@ -64,11 +64,11 @@ class RecipesController < ApplicationController
     end
   end
 
-  def toggle_liked
-    if current_user.liked_recipes.include?(@recipe)
-      current_user.unlike(@recipe)
+  def toggle_saved
+    if current_user.saved_recipe?(@recipe)
+      current_user.unsave_recipe(@recipe)
     else
-      current_user.like(@recipe)
+      current_user.save_recipe(@recipe)
     end
   end
 
