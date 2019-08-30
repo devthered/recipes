@@ -162,3 +162,7 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+production:
+    clients:
+        default:
+            uri: mongodb://admin:43cip3ca4ds_mlab@ds056009.mlab.com:56009/recipe_cards

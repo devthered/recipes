@@ -11,18 +11,10 @@ User.collection.find.delete_many
 
 puts "creating users..."
 devin = User.create(name: "Devin Reed", email: "reed.devin@gmail.com", password: "nevermore", activated: true, admin: true)
-kush = User.create(name: "Kush Patel", email: "kp@example.com", password: "nevermore", activated: true, admin: false)
-chris = User.create(name: "Chris Reed", email: "cr@example.com", password: "nevermore", activated: true, admin: false)
 
 puts "loading recipes from files..."
 JSON.parse(File.read('db/recipes.json')).each do |doc|
-  user = devin
-  if doc["source"] == "Kush Patel"
-    user = kush
-  elsif doc["source"] == "Chris Reed"
-    user = chris
-  end
-  Recipe.create(doc.merge(owner: user))
+  Recipe.create(doc.merge(owner: devin))
 end
 
 puts "done!"
