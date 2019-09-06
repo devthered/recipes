@@ -234,7 +234,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
-  capybara (>= 2.15)
+  capybara
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   jquery-rails
