@@ -150,11 +150,11 @@ input[type="submit"].save-button:hover {
 }
 
 .heart-closed {
-  background-image: url('/assets/heart_closed.png');
+  background-image: image-url('heart_closed.png');
 }
 
 .heart-open {
-  background-image: url('/assets/heart_open.png');
+  background-image: image-url('heart_open.png');
 }
 
 /*
