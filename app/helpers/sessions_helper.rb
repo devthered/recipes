@@ -28,7 +28,7 @@ module SessionsHelper
 
   # Returns the current user, or nil if not logged in.
   def current_user
-    if session[:user_id]
+    if session[:user_id] and not session[:user_id].empty?
       @current_user ||= User.find_by(id: session[:user_id])
     elsif cookies.signed[:user_id]
       user = User.find_by(id: cookies.signed[:user_id])
