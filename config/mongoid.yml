@@ -168,6 +168,5 @@ production:
       uri: mongodb://admin:triforce333@ds056009.mlab.com:56009/recipe_cards
       options:
         retry_writes: false
-      host: devin-recipe-cards.herokuapp.com
   options:
     raise_not_found_error: false
