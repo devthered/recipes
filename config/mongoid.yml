@@ -165,5 +165,5 @@ production:
   clients:
     default:
       uri: mongodb://admin:triforce333@ds056009.mlab.com:56009/recipe_cards
-  options:
-    retry_writes: false
+      options:
+        retry_writes: false
