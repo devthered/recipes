@@ -3,7 +3,7 @@ development:
   clients:
     # Defines the default client. (required)
     default:
-      uri: <%= "mongodb://admin:triforce333@ds056009.mlab.com:56009/recipe_cards" %>
+      uri: <%= "mongodb://#{ENV['MLAB_RECIPES_USERNAME']}:#{ENV['MLAB_RECIPES_PASSWORD']}@ds056009.mlab.com:56009/recipe_cards" %>
       #database: recipes_development
       #hosts:
         #- localhost:27017
@@ -165,8 +165,7 @@ test:
 production:
   clients:
     default:
-      # uri: <%= "mongodb://${ENV['MLAB_RECIPES_USERNAME']}:${ENV['MLAB_RECIPES_PASSWORD']}@ds056009.mlab.com:56009/recipe_cards" %>
-      uri: <%= "mongodb://admin:triforce333@ds056009.mlab.com:56009/recipe_cards" %>
+      uri: <%= "mongodb://#{ENV['MLAB_RECIPES_USERNAME']}:#{ENV['MLAB_RECIPES_PASSWORD']}@ds056009.mlab.com:56009/recipe_cards" %>
       options:
         retry_writes: false
   options:
