@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :index_saved_recipes, :show, :edit, :update, :index, :destroy]
   before_action :correct_user, only: [:edit, :update]
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [:show, :update, :destroy]
   before_action :admin_user, only: [:destroy]
 
   # GET /users
