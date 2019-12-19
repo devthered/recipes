@@ -1,6 +1,11 @@
 <div class="container">
   <%= render partial: "user", locals: { user: @user } %>
-  <h1><%= @user.first_name + "'s Recipes" %></h1>
+
+  <% if @user == current_user and @user.recipes.count == 0 %>
+    <h1><%= link_to 'Add a Recipe!', new_recipe_path, class: 'black-link' %></h1>
+  <% else %>
+    <h1><%= @user.first_name + "'s Recipes" %></h1>
+  <% end %>
 </div>
 
 <div id="recipes" class="container">
