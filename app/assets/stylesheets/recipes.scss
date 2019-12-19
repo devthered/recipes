@@ -181,6 +181,31 @@ div.genre-selector {
   line-height: normal;
 }
 
+.recipe-body h3 {
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.optional-data {
+  margin-left: 10px;
+  color: grey;
+  font-size: 16px;
+}
+
+.optional-data p {
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.optional-data select {
+  font-size: 16px;
+  color: grey;
+  border-color: grey;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
 .recipe-body .actions {
   margin-top: 15px;
 }

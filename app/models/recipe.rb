@@ -15,6 +15,11 @@ class Recipe
     'sweets'
   ]
 
+  @serving_types = [
+    'Serves',
+    'Makes'
+  ]
+
   belongs_to :owner, class_name: 'User', inverse_of: :recipes
   has_and_belongs_to_many :saved_by_users, class_name: 'User', inverse_of: :saved_recipes
   
@@ -23,6 +28,7 @@ class Recipe
   field :ingredients, type: Array, default: []
   field :instructions, type: String
   field :source, type: String
+  field :serving_type, type: String, default: 'Serves'
   field :servings, type: Integer, default: 0
   field :time_hours, type: Integer, default: 0
   field :time_minutes, type: Integer, default: 0
@@ -31,6 +37,7 @@ class Recipe
 
   validates_presence_of :title, :genre, :ingredients, :instructions
   validates :genre, inclusion: { in: @genres }
+  validates :serving_type, inclusion: { in: @serving_types }
 
   def ingredients=(ingredients)
     if ingredients.is_a? String
@@ -64,6 +71,10 @@ class Recipe
 
   def self.genres
     return @genres
+  end
+
+  def self.serving_types
+    return @serving_types
   end
 
   def self.search(params)

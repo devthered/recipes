@@ -30,18 +30,27 @@
       <div class="pretty-dropdown genre-selector">
         <%= form.select :genre, Recipe.genres %>
       </div>
-      <%= form.text_field :source, class: 'recipe-author', placeholder: 'source, if other than you' %>
+      <%= form.text_field :source, class: 'recipe-author', placeholder: 'original author, if not you' %>
     </div>
 
     <!-- Edit recipe ingredients and istructions -->
     <div class="recipe-body">
-      Serves <%= form.select :servings, [*1..20] %>
-      <div class="small-spacer"></div>
-      Total Time: <%= form.select :time_hours, [*0..10] %> hours, <%= form.select :time_minutes, (0..55).step(5).to_a %> minutes
       <div class="small-spacer"></div>
       <%= form.text_area :ingredients, class: 'pretty-textarea ingredients-edit', placeholder: 'ingredients', id: 'ingredients', value: @recipe.print_ingredients if @recipe %>
       <div class="spacer"></div>
       <%= form.text_area :instructions, class: 'pretty-textarea instructions-edit', placeholder: 'instructions', id: 'instructions' %>
+
+      <div class="small-spacer"></div>
+      <h3>Optional Data</h3>
+      <div class="optional-data">
+        <p>keep options at 0 to leave out<p>
+        <div class="small-spacer"></div>
+        <%= form.select :serving_type, Recipe.serving_types %> <%= form.select :servings, [*0..20] %>
+        <div class="small-spacer"></div>
+        Total Time: <%= form.select :time_hours, [*0..10] %> hours, <%= form.select :time_minutes, (0..55).step(5).to_a %> minutes
+      </div>
+      <div class="small-spacer"></div>
+
       <div class="actions">
         <%= form.submit %>
       </div>

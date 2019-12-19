@@ -4,15 +4,20 @@
     <%= button_to 'Save', toggle_saved_recipe_url(recipe), remote: true, class: "save-button #{saved_by_current_user?(recipe) ? 'heart-closed' : 'heart-open'}", title: saved_by_current_user?(recipe) ? 'Saved' : 'Click to Save'  %>
     <%= link_to recipe.title, recipe, class: 'recipe-title white-link' %>
     <div class="spacer"></div>
-    <%= link_to recipe.owner.name, recipe.owner, class: 'recipe-author white-link' %>
+    <p class="recipe-author">
+      <% if recipe.owner.name != recipe.source %>
+        User: 
+      <% end %>
+      <%= link_to recipe.owner.name, recipe.owner, class: 'white-link' %>
+    </p>
     <% if recipe.owner.name != recipe.source %>
-      <p class="recipe-author"><%= recipe.source %></p>
+      <p class="recipe-author">Author: <%= recipe.source %></p>
     <% end %>
   </div>
   <div class="recipe-body">
     <div class="left-side">
       <% if recipe.servings > 0 %>
-        <p><i>Serves <%= recipe.servings %>.</i></p>
+        <p><i><%= recipe.serving_type %> <%= recipe.servings %>.</i></p>
       <% end %>
       <% if recipe.time_hours > 0 or recipe.time_minutes > 0 %>
         <p><i>Takes about <%= distance_of_time_in_words(60 * recipe.time_minutes + 3600 * recipe.time_hours)  %>.</i></p>
