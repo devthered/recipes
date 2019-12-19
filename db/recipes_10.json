@@ -1,5 +1,18 @@
 [
   {
+    "title": "Pizza Dough",
+    "source": "Kush Patel",
+    "genre": "bread",
+    "ingredients": [
+      "3.5 cups flour",
+      "1.5 cups lukewarm water ",
+      "2 tbsp olive oil",
+      "7 g yeast",
+      "1.5 tbsp salt"
+    ],
+    "instructions": "Activate yeast by dissolving into water and waiting about 5 minutes until bubbles form. In another bowl, mix the flour and salt together. Add olive oil and water, and mix in bowl until ingredients are thoroughly combined. Then turn out the dough onto a floured work surface and knead vigorously for about 10 minutes, until the dough is stretchy, smooth, and much less sticky. Then roll into a ball, place in lightly oiled bowl, turning once to coat in oil, and proof under cling film for at least an hour, or up to 24.\r\n\r\nTurn out the dough onto a floured work surface, kneading slightly to recombine if it has gotten uneven. Split into two and roll each half into a ball. Dust with flour and proof under a clean tea towel for another hour.\r\n\r\nStart to flatten the pizza dough by poking it all over with your fingers. Use this technique to coax the dough gently into the desired shape. You can also let it hang off the side of the counter, or throw it with a spin using your knuckles. Add toppings and bake at 500 ̊F for 12-15 minutes."
+  },
+  {
     "title": "Pasta Aglio e Olio",
     "source": "Binging with Babish",
     "genre": "noodles",
@@ -14,6 +27,19 @@
     "instructions": "Heavily salt a large pot of water, and bring to a boil. Cook pasta to al dente while completing the steps below. \r\n\r\nSlice the garlic cloves thinly, and set aside. Pick the parsley leaves from their stems, and finely chop. Add olive oil to a large sauté pan, and heat over medium flame until shimmering. Add sliced garlic, stirring constantly, until garlic is barely toasted. Add the red pepper flake and remove from heat. \r\n\r\nAdd the pasta, drained, with about ¼ cup reserved pasta cooking water. Add lemon juice and parsley, and toss to combine. Season for salt and pepper, and serve.\r\n",
     "servings": 2,
     "time_minutes": 20
+  },
+  {
+    "title": "Chile Rellenos",
+    "source": "Kush and Devin",
+    "genre": "cooked veg",
+    "ingredients": [
+      "6 poblano or pasilla chiles",
+      "1 package queso fresco",
+      "2 eggs, separated",
+      "flour",
+      "3 serrano chiles (optional)"
+    ],
+    "instructions": "Using the broiler or an open flame, char the outsides of the poblano chiles until they are blackened and bubbly. Once they are blackened all the way around, set the chiles in a plastic bag for 15 minutes to sweat and cool.\r\n\r\nWhile still warm, carefully remove the chiles one by one from the bag. Using your hands, peel off the blackened skin (you can leave a bit). Make a small vertical slit in each chile. Pull out the seeds from the top (leaving in a few is fine). This is hard to do without splitting the chile open too much, so take care. Stuff each chile with chopped-up queso fresco and, optionally, diced serrano chiles. Close along the seam using toothpicks or skewers.\r\n\r\nPrepare a deep pan with 1-2 inches of vegetable oil on medium heat. Prep a bowl of flour, and another bowl with two egg whites, making sure to save the yolks. Beat the egg whites vigorously until the form stiff peaks, several minutes. At the end, add the yolk back in and beat until just combined.\r\n\r\nOne by one, coat each stuffed chile in flour, then egg batter, and then fry on both sides."
   },
   {
     "title": "Five-Peppercorn Fish",
@@ -62,6 +88,25 @@
     "instructions": "Preheat oven to 350°.\r\n\r\nFry meat in olive oil until brown. Add soy and worcester sauce. Add onions, Hoisin sauce, garlic chili paste. Optionally, add in peas and carrots. When onions are fully cooked, add tomato paste. Mix well, turn off heat. Finally, stir in garam marsala.\r\n\r\nBoil potatoes until soft. Then blend until very smooth with a generous pad of butter and cream.\r\n\r\nCover bottom of pan with oregano. Spoon in meat. Then spoon in mashed potatoes. Spread out and rake with fork into decorative pattern. Grate parmesan on top, then spray or brush top generously with olive oil. Bake for 30 mins. Then brown under the grill. Watch carefully, as it will brown very quickly!"
   },
   {
+    "title": "Grilled Tempeh & Arugula Salad",
+    "source": "Kush Patel",
+    "genre": "raw veg",
+    "ingredients": [
+      "1 lb baby arugula",
+      "6 oz tempeh",
+      "cherry tomatoes",
+      "crumbly blue cheese",
+      "glazed pecans (see Nuts section)",
+      "dried cranberries",
+      "soy sauce",
+      "olive oil",
+      "balsamic vinegar",
+      "salt ",
+      "pepper"
+    ],
+    "instructions": "Slice tempeh thinly and sautée in olive oil. Pour a bit of soy sauce over the tempeh while cooking, and cook both sides until browned.\r\n\r\nCombine arugula, tempeh, tomatoes (sliced in half), pecans, cranberries, and cheese crumbles in a large salad bowl. Dress with 50/50 mix of oil and vinegar and add salt and pepper to taste."
+  },
+  {
     "title": "Cranberry Sauce",
     "source": "Joy of Cooking",
     "genre": "sauces",
@@ -74,6 +119,22 @@
     ],
     "instructions": "Cook, uncovered until the cranberries pop open and the mixture is thickened, about 7-15 minutes.\r\n\r\nLet cool and serve warm, or refrigerate and enjoy cold."
   },
+  {
+    "title": "Classic British Scones",
+    "source": "Mischa Lewis-Norelle",
+    "genre": "breakfast",
+    "ingredients": [
+      "285 g (2 cups) flour",
+      "40 g (3 tbsp) sugar",
+      "1 tbsp baking powder",
+      "½ tsp salt",
+      "70 g (5 tbsp) cold unsalted butter",
+      "120 g (1 cup) heavy cream (or buttermilk or coconut milk)",
+      "½ cup dried currants or cranberries (optional)"
+    ],
+    "instructions": "Preheat oven to 425˚F. \r\n\r\nCombine dry ingredients and butter with food processor or fingertips until mixture resembles coarse sand. Stir in any mix-ins. Then put the mixture in the freezer for 15 minutes, or overnight for easy scones tomorrow morning.\r\n\r\nStir in cream until a dough begins to form. Then transfer to a floured work surface and knead together until the dough just comes together in a rough, slightly sticky ball. Gently pat dough into a ¾-inch-think circle, and cut into 8 wedges. Bake until tops are light brown, 12-15 minutes. Let cool on rack for 10 minutes before serving with butter (or clotted cream if available) and jam.\r\n\r\nVariations:\r\nJalapeno Cheddar: omit sugar. Add only 3 tbsp butter along with 4 oz sharp cheddar cheese. Add ½ cup jalapenos.\r\nCranberry Orange: add ½ cup cranberries, the zest of an orange, and 2 tbsp orange liqueur\r\nGinger, Lemon, Mint: add ½ cup crystallized ginger, the zest of a lemon, 2 tbsp lemon juice or extract, ¼ cup chopped mint"
+  },
+  
   {
     "title": "Lava Cakes of Love",
     "source": "Matty Matheson",
