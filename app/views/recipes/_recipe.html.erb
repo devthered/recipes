@@ -5,12 +5,12 @@
     <%= link_to recipe.title, recipe, class: 'recipe-title white-link' %>
     <div class="spacer"></div>
     <p class="recipe-author">
-      <% if recipe.owner.name != recipe.source %>
+      <% if !recipe.source.empty? and recipe.owner.name != recipe.source %>
         User: 
       <% end %>
       <%= link_to recipe.owner.name, recipe.owner, class: 'white-link' %>
     </p>
-    <% if recipe.owner.name != recipe.source %>
+    <% if !recipe.source.empty? and recipe.owner.name != recipe.source %>
       <p class="recipe-author">Author: <%= recipe.source %></p>
     <% end %>
   </div>
